@@ -1,0 +1,810 @@
+body {
+	background-color: #394867;
+	font-family: "Raleway", sans-serif;
+	font-size: 15px;
+	line-height: 15px;
+	color: #394867;
+}
+
+.btn,
+a,
+a:hover {
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Old Standard TT", serif;
+	line-height: 1em;
+	margin: 0;
+}
+h1 {
+	font-size: 5em;
+}
+h1.title,
+h2 {
+	font-size: 2em;
+	line-height: 3em;
+}
+h3 {
+	font-size: 1.5em;
+	margin-bottom: 0.7em;
+}
+h4 {
+	font-size: 1.25em;
+	margin-bottom: 0.75em;
+}
+p {
+	margin-bottom: 1em;
+	line-height: 1.5em;
+}
+
+.btn {
+	border: none !important;
+	border-radius: 0;
+	padding: 5px 30px;
+}
+.btn-default {
+	background: #212a3e;
+	box-shadow: none !important;
+	color: #fff;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active {
+	box-shadow: none !important;
+	background: #9ba4b5;
+	color: #fff;
+	outline: none !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	background-color: #212a3e;
+	border-color: #212a3e;
+}
+.pagination > li > a,
+.pagination > li > span {
+	color: #212a3e;
+}
+.spacer {
+	padding: 6em 0;
+}
+
+/*nav*/
+.navbar {
+	margin: 0;
+}
+.navbar-nav {
+	margin: 0 -15px;
+}
+.navbar-nav > li > a {
+	font-size: 1em;
+	line-height: 4.26em;
+	padding: 10px 0 10px 30px;
+}
+.navbar-default {
+	border: none;
+	background: #eeeeee;
+}
+.navbar-brand {
+	height: 83px;
+}
+/*nav*/
+
+/*SLIDER*/
+.banner {
+	position: relative;
+	color: #fff;
+}
+.banner p {
+	font: 300 1.35em/4em "Old Standard TT", serif;
+	margin: 0;
+}
+.banner img.img-responsive {
+	width: 100%;
+}
+.banner .welcome-message {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	text-align: center;
+}
+.banner .welcome-message .wrap-info {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.banner .welcome-message .wrap-info .information {
+	display: table-cell;
+	vertical-align: middle;
+}
+.banner .arrow-nav {
+	position: absolute;
+	bottom: -3.5em;
+	background-color: #9ba4b5;
+	height: 7em;
+	width: 7em;
+	display: inline-block;
+	z-index: 100;
+	left: 50%;
+	margin-left: -52px;
+	color: #fff;
+	border-radius: 50%;
+}
+.banner .arrow-nav i {
+	font-size: 5em;
+	line-height: 105px;
+}
+.banner .arrow-nav:hover {
+	background: #9ba4b5;
+}
+
+/*reserve-info*/
+.reserve-info {
+	background-color: #fff;
+}
+
+.services {
+	background-color: #f1f6f9;
+}
+.services .caption {
+	background-color: #9ba4b5;
+	color: #212a3e;
+	padding: 1.5em;
+}
+.services .caption a {
+	color: #212a3e;
+	font-size: 1.25em;
+}
+.services .caption a:hover {
+	color: #fff;
+}
+.carousel-control {
+	width: 10%;
+	background: none !important;
+}
+.carousel-control i.fa {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -10px;
+}
+.carousel img {
+	width: 100%;
+}
+
+/*footer*/
+footer {
+	background-color: #394867;
+	color: #aeaeac;
+}
+footer.spacer {
+	padding: 3em 0;
+}
+footer h4 {
+	color: #dcdcdc;
+}
+footer a,
+footer p {
+	line-height: 1.5em;
+	font-size: 0.85em;
+	color: #aeaeac;
+}
+footer a:hover {
+	color: #fff;
+}
+footer .subscribe .form-control {
+	height: 30px;
+	padding: 4px 12px;
+	border: none;
+}
+footer .subscribe .input-group-btn:last-child > .btn {
+	margin: 0;
+}
+footer .subscribe .input-group {
+	margin-bottom: 1em;
+}
+footer .subscribe .social a {
+	font-size: 1.5em;
+	margin-right: 0.25em;
+}
+.copyright {
+	background-color: #252423;
+	padding: 0.6em 0;
+	font-size: 0.85em;
+	color: #7f7f7f;
+}
+.copyright a {
+	color: #aeaeac;
+}
+/*footer*/
+
+.toTop {
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	background: rgba(0, 0, 0, 0.5);
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	color: #fff;
+	font-size: 2em;
+}
+.toTop:hover {
+	color: #fff;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/*rooms and tariff*/
+.rooms {
+	margin-bottom: 2em;
+}
+.rooms .info {
+	padding: 1.5em;
+	background-color: #e8e7e0;
+}
+
+.room-features .amenitites li {
+	margin-bottom: 1em;
+}
+.room-features .size-price {
+	background-color: #c7c5bb;
+	padding: 2em 0;
+	text-align: center;
+	color: #fff;
+	height: 10.97em;
+	line-height: 3em;
+}
+.room-features .size-price span {
+	display: block;
+	font-size: 2em;
+}
+
+.gallery .gallery-image {
+	margin-bottom: 2em;
+	display: inline-block;
+}
+.gallery .gallery-image img {
+	width: 100%;
+}
+
+body::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #ccc;
+	/*        -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	/*        -webkit-border-radius: 10px;
+        border-radius: 10px;*/
+	background: #212a3e;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #ddd;
+}
+
+/*responsive starts here*/
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+	.navbar-toggle {
+		margin-top: 23px;
+	}
+	.navbar-default .navbar-toggle {
+		background-color: #212a3e;
+	}
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background-color: #5f5021;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.navbar-nav > li > a {
+		line-height: 1em;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	.banner p {
+		font: 300 1em/1em "Old Standard TT", serif;
+	}
+	.banner .arrow-nav {
+		margin-left: -22px;
+		height: 3em;
+		width: 3em;
+		bottom: -1.5em;
+	}
+	.banner .arrow-nav i {
+		font-size: 2em;
+		line-height: 45px;
+	}
+
+	.spacer {
+		padding: 4em 0;
+	}
+
+	.reserve-info h3 {
+		margin-top: 2em;
+	}
+
+	.services div.col-sm-4 {
+		margin-bottom: 2em;
+	}
+
+	footer.spacer {
+		padding: 1em 0 3em 0;
+	}
+	footer h4 {
+		margin-top: 2em;
+	}
+
+	.room-features .size-price {
+		margin-bottom: 2em;
+	}
+}
+
+.section-title > h2,
+.video-tour .section_title > h2,
+.discount_offer_title h2 {
+	color: #4a4a4a;
+	font-size: 32px;
+	font-weight: bold;
+	position: relative;
+	text-transform: uppercase;
+	display: inline-block;
+	line-height: 30px;
+	padding-bottom: 20px;
+	margin: 0;
+}
+.about-section .section-title.mb-80 {
+	margin-bottom: 30px;
+}
+.section-title > h2 {
+	border-bottom: 1px solid #4a4a4a;
+}
+.section-title > h2 span,
+.video-tour .section_title > h2 span,
+.discount_offer_title h2 span {
+	color: #212a3e;
+}
+.section-title > h2::after {
+	bottom: -12px;
+	content: "";
+	font-size: 14px;
+	height: 20px;
+	left: 39%;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	text-align: center;
+}
+.about-chondo > p {
+	color: #4a4a4a;
+	line-height: 26px;
+	margin: 0 0 32px;
+}
+.about-member > img {
+	border: 2px solid #212a3e;
+	border-radius: 100%;
+	height: 100px;
+	width: 100px;
+}
+.about-member > h3 {
+	color: #787878;
+	font-size: 24px;
+	margin: 10px 0 3px;
+	text-transform: capitalize;
+}
+.about-member h5 {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #787878;
+}
+/*---------------
+	7. our Room css
+------------------*/
+.our-room .section-title > h2::after {
+	left: 0;
+	width: 45px;
+}
+.section-title > p {
+	color: #4a4a4a;
+	line-height: 18px;
+	margin-top: 35px;
+}
+.our-room-show .single-room {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 2px solid #b8b8b8;
+	margin: 5px 0;
+	transition: all 0.3s ease 0s;
+}
+.single-room .room-desc {
+	padding: 34px 20px 25px;
+	text-align: left;
+}
+.room-desc .room-book {
+	display: inline-block;
+	float: right;
+	margin-top: -52px;
+}
+.single-room.mb-70 {
+	margin-bottom: 70px;
+}
+.room-desc .room-book a,
+.static2 .services-desc-inner .room-book > a:hover {
+	background: #4a4a4a none repeat scroll 0 0;
+	color: #fff;
+}
+.room-desc .room-book a,
+.static2 .services-desc-inner .room-book > a {
+	display: inline-block;
+	font-size: 14px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+.room-desc .room-book a {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+.room-desc .room-book a:hover,
+.static2 .services-desc-inner .room-book > a {
+	background: #212a3e none repeat scroll 0 0;
+	color: #fff;
+}
+.room-section .single-room .room-desc {
+	background: #f1f1f1 none repeat scroll 0 0;
+}
+.room-desc .room-name h3 {
+	color: #4a4a4a;
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 7px;
+	text-transform: capitalize;
+}
+.room-rent > h5 {
+	color: #6d6d6d;
+	text-transform: capitalize;
+}
+.room-rent > h5 span {
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+}
+.our-room-show .single-room:hover,
+.single_news-post:hover {
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.35);
+}
+.carousel-list .col-md-4 {
+	width: 100%;
+}
+.carousel-list.owl-theme .owl-controls .owl-page span,
+.our-room-list.owl-theme .owl-controls .owl-page span,
+.our-news-list.owl-theme .owl-controls .owl-page span,
+.team_brand.style2.owl-theme .owl-controls .owl-page span {
+	background: #cbcbcb none repeat scroll 0 0;
+	height: 8px;
+	opacity: 1;
+	transition: all 0.3s ease 0s;
+	width: 26px;
+}
+.carousel-list.owl-theme .owl-controls .owl-page.active span,
+.our-room-list.owl-theme .owl-controls .owl-page.active span,
+.our-news-list.owl-theme .owl-controls .owl-page.active span,
+.team_brand.style2.owl-theme .owl-controls .owl-page.active span {
+	background: #212a3e none repeat scroll 0 0;
+	width: 40px;
+}
+.our-room .our-room-list.owl-theme .owl-controls,
+.our-room .our-news-list.owl-theme .owl-controls,
+.team_brand.style2.owl-theme .owl-controls {
+	margin-top: 30px;
+	text-align: center;
+}
+.our-room .carousel-list.owl-theme .owl-controls {
+	margin-top: 40px;
+}
+.owl-pagination.owl-theme .owl-controls {
+	margin-top: 40px;
+}
+.our-room-list .single-room.mb-80 {
+	margin-bottom: 75px;
+}
+/*---------------
+	8. Our serivces Css here
+--------------------*/
+.single-services .services-img {
+	position: relative;
+}
+.services-img > img {
+	width: 100%;
+}
+.services-title {
+	bottom: 13px;
+	left: 13px;
+	position: absolute;
+	right: 13px;
+	transition: all 0.5s ease 0s;
+}
+.services-hover-desc {
+	bottom: 0;
+	left: 0;
+	padding: 13px;
+	position: absolute;
+	top: 0;
+}
+.services-title > h2 {
+	background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+	color: #4a4a4a;
+	display: inline-block;
+	font-size: 24px;
+	line-height: 18px;
+	margin-bottom: 0;
+	padding: 25px 0;
+	text-transform: capitalize;
+	width: 100%;
+}
+.single-services {
+	overflow: hidden;
+}
+.services-hover-inner {
+	background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+	display: inline-block;
+	height: 100%;
+	opacity: 0;
+	padding: 10px;
+	transform: scale(0.5);
+	transition: all 0.5s ease 0s;
+	width: 100%;
+}
+.services-hover-table-cell > h2 {
+	color: #4a4a4a;
+	font-size: 30px;
+	text-transform: capitalize;
+}
+.services-hover-table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.services-hover-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+.services-hover-table-cell > p {
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 0;
+}
+.single-services:hover .services-hover-inner,
+.single-services.active .services-hover-inner {
+	opacity: 1;
+	transform: scale(1);
+}
+.single-services:hover .services-title {
+	opacity: 0;
+	transform: scale(0);
+}
+.boxed-layout .services-hover-table-cell > p {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+7. our Room css ------------------*/ .our-room .section-title > h2::after {
+	left: 0;
+	width: 45px;
+}
+.section-title > p {
+	color: #4a4a4a;
+	line-height: 18px;
+	margin-top: 35px;
+}
+.our-room-show .single-room {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 2px solid #b8b8b8;
+	margin: 5px 0;
+	transition: all 0.3s ease 0s;
+}
+.single-room .room-desc {
+	padding: 34px 20px 25px;
+	text-align: left;
+}
+.room-desc .room-book {
+	display: inline-block;
+	float: right;
+	margin-top: -52px;
+}
+.single-room.mb-70 {
+	margin-bottom: 70px;
+}
+.room-desc .room-book a,
+.static2 .services-desc-inner .room-book > a:hover {
+	background: #4a4a4a none repeat scroll 0 0;
+	color: #fff;
+}
+.room-desc .room-book a,
+.static2 .services-desc-inner .room-book > a {
+	display: inline-block;
+	font-size: 14px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+.room-desc .room-book a {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+.room-desc .room-book a:hover,
+.static2 .services-desc-inner .room-book > a {
+	background: #212a3e none repeat scroll 0 0;
+	color: #fff;
+}
+.room-section .single-room .room-desc {
+	background: #f1f1f1 none repeat scroll 0 0;
+}
+.room-desc .room-name h3 {
+	color: #4a4a4a;
+	font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 7px;
+	text-transform: capitalize;
+}
+.room-rent > h5 {
+	color: #6d6d6d;
+	text-transform: capitalize;
+}
+.room-rent > h5 span {
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+}
+.our-room-show .single-room:hover,
+.single_news-post:hover {
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.35);
+}
+.carousel-list .col-md-4 {
+	width: 100%;
+}
+.carousel-list.owl-theme .owl-controls .owl-page span,
+.our-room-list.owl-theme .owl-controls .owl-page span,
+.our-news-list.owl-theme .owl-controls .owl-page span,
+.team_brand.style2.owl-theme .owl-controls .owl-page span {
+	background: #cbcbcb none repeat scroll 0 0;
+	height: 8px;
+	opacity: 1;
+	transition: all 0.3s ease 0s;
+	width: 26px;
+}
+.carousel-list.owl-theme .owl-controls .owl-page.active span,
+.our-room-list.owl-theme .owl-controls .owl-page.active span,
+.our-news-list.owl-theme .owl-controls .owl-page.active span,
+.team_brand.style2.owl-theme .owl-controls .owl-page.active span {
+	background: #212a3e none repeat scroll 0 0;
+	width: 40px;
+}
+.our-room .our-room-list.owl-theme .owl-controls,
+.our-room .our-news-list.owl-theme .owl-controls,
+.team_brand.style2.owl-theme .owl-controls {
+	margin-top: 30px;
+	text-align: center;
+}
+.our-room .carousel-list.owl-theme .owl-controls {
+	margin-top: 40px;
+}
+.owl-pagination.owl-theme .owl-controls {
+	margin-top: 40px;
+}
+.our-room-list .single-room.mb-80 {
+	margin-bottom: 75px;
+}
+/*---------------
+	8. Our serivces Css here
+--------------------*/
+.single-services .services-img {
+	position: relative;
+}
+.services-img > img {
+	width: 100%;
+}
+.services-title {
+	bottom: 13px;
+	left: 13px;
+	position: absolute;
+	right: 13px;
+	transition: all 0.5s ease 0s;
+}
+.services-hover-desc {
+	bottom: 0;
+	left: 0;
+	padding: 13px;
+	position: absolute;
+	top: 0;
+}
+.services-title > h2 {
+	background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+	color: #4a4a4a;
+	display: inline-block;
+	font-size: 24px;
+	line-height: 18px;
+	margin-bottom: 0;
+	padding: 25px 0;
+	text-transform: capitalize;
+	width: 100%;
+}
+.single-services {
+	overflow: hidden;
+}
+.services-hover-inner {
+	background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+	display: inline-block;
+	height: 100%;
+	opacity: 0;
+	padding: 10px;
+	transform: scale(0.5);
+	transition: all 0.5s ease 0s;
+	width: 100%;
+}
+.services-hover-table-cell > h2 {
+	color: #4a4a4a;
+	font-size: 30px;
+	text-transform: capitalize;
+}
+.services-hover-table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.services-hover-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+.services-hover-table-cell > p {
+	font-size: 14px;
+	line-height: 22px;
+	margin-bottom: 0;
+}
+.single-services:hover .services-hover-inner,
+.single-services.active .services-hover-inner {
+	opacity: 1;
+	transform: scale(1);
+}
+.single-services:hover .services-title {
+	opacity: 0;
+	transform: scale(0);
+}
+.boxed-layout .services-hover-table-cell > p {
+	font-size: 13px;
+	line-height: 20px;
+}
