@@ -184,15 +184,15 @@ a{
             <div class="login-show">
                 <p><?=$this->session->flashdata('msg');?></p>
                     <form action="<?=site_url('Auth/login')?>" method="post">
-                        <input type="text" name="email" placeholder="Email" required="">
+                        <input type="text" name="email" placeholder="Email" required="" autocomplete="off">
                         <input type="password" name="no" placeholder="No. Telp." required="">
                         <input type="submit" name="login" value="Login" >
                     </form>
             </div>
             <div class="register-show">
                 <form action="<?=site_url('Auth/daftar')?>" method="post">
-                    <input type="text" name="nama" placeholder="Nama Lengkap" required="">
-                    <input type="text" name="mail" placeholder="Email" required="">
+                    <input type="text" name="nama" placeholder="Nama Lengkap" required="" autocomplete="off">
+                    <input type="text" name="mail" placeholder="Email" required="" autocomplete="off">
                     <input type="password" name="telp" placeholder="No Telp" required="">
                     <input type="hidden" name="akses" value="User">
                     <input type="submit" name="daftar" value="Register">
