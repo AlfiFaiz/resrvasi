@@ -47,52 +47,34 @@
 </head>  
 <body>
     <div class="wrapper">
-
           <div class="room-booking ptb-80">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
                         <div class="section-title mb-80 text-center">
                             <h2>Konfirmasi <span>Pemesanan</span></h2>
-                            
-                            <div class="toast">
-                                <div class="toast-body">
-                                   <p><?=$this->session->flashdata('msg');?></p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="booking-rooms-tab">
-                            <ul class="nav" role="tablist">
-                                <li class="active"><a href="#done" data-toggle="tab"><span class="tab-border">1</span><span>Konfirmasi</span></a></li>
-                                <li><a href="#payment" data-toggle="tab"><span class="tab-border">2</span><span>Status Pemesanan</span></a></li>
-                            </ul>
-                        </div>
                         <div class="service-tab-desc text-left mt-60">
                             <div class="tab-content">
-
-                                <div role="tabpanel" class="tab-pane active" id="done">
-                                    <div class="booking-done">
                                         <div class="booking-done-table table-responsive text-center" style="width: 100%;">
-                                            <div class="text-right"><a href="<?= site_url('Welcome/index')?>" class="btn btn-primary">Kembali ke Beranda</a></div><br><br>
+                                            <div class="text-center"><a href="<?= site_url('Welcome/index')?>" class="btn btn-primary">Kembali ke Beranda</a></div><br><br>
+                                            <?php 
+                                            $nomor = 1;
+                                            foreach ($trans as $t) {
+                                            ?>
+                                            <h2 class="text-center"><b>PESANAN</b> <?php echo $nomor ?></h2>
                                             <table class="table">
                                                 <tr>
-                                                    <td><p><?=$trans->jumlah?> Kamar <span><?=$trans->tgl_in?> - <?=$trans->tgl_out?></span></p></td>
-                                                    <td><p><?=$trans->nama?><span></span></p></td>
-                                                    <td><p><?=$trans->email?><span></span></p></td>
-                                                    <td><p><?=$trans->no?></p></td>
+                                                    <td><p><?=$t->jumlah?> Kamar <span><?=$t->tgl_in?> - <?=$t->tgl_out?></span></p></td>
+                                                    <td><p>Status Pemesanan Anda <span>"<?=$t->status?>"</span></p></td>
                                                 </tr>
                                                 <tr class="row2">
-                                                    <td><p><?=$trans->jenis?></p></td>
+                                                    <td><p><?=$t->jenis?></p></td>
                                                     <td></td>
                                                     <td></td>
                                                     <?php 
-                                                        $tampil = $this->db->get_where('kamar',array('jenis' => $trans->jenis))->row(); 
+                                                        $tampil = $this->db->get_where('kamar',array('jenis' => $t->jenis))->row(); 
                                                     ?>
                                                     <td><p><?=$tampil->harga?></p></td>
                                                 </tr>
@@ -100,17 +82,18 @@
                                                     <td><p>Total</p></td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td><p><?=$trans->jumlah * $tampil->harga?></p></td>
+                                                    <td><p><?=$t->jumlah * $tampil->harga?></p></td>
                                                 </tr>
                                             </table>
+                                            <br>
+                                            <br>
+                                            <?php 
+                                        $nomor++;
+                                                                                        }
+                                            ?>
+                                        </div>        
                                         </div>
                                     </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="payment">
-                                    <div class="payment-info">
-                                        <h1>Status Pemesanan Anda</h1>
-                                        <h3>"<?=$trans->status?>"</h3>
-                                    </div>        
                                 </div>
                             </div>
                         </div>

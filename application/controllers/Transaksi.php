@@ -89,7 +89,7 @@ class Transaksi extends CI_Controller {
 
 	public function edit($id){
 	    $this->db->set('status','Confirm');
-		$this->db->where('id', $id);
+		$this->db->where('id_transaksi', $id);
 		$this->db->update('transaksi');
 
 		redirect('Transaksi/data',$data);

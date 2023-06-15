@@ -176,7 +176,7 @@
                                             <td><?=$trans->no ?></td>
                                             <td><?=$trans->status ?></td>
                                             <td>
-                                                <a class="btn btn-success" href="<?=site_url('Transaksi/edit/'.$trans->id)?>">Confirm</a>
+                                                <a class="btn btn-success" href="<?=site_url('Transaksi/edit/'.$trans->id_transaksi)?>">Confirm</a>
                                             </td>
                                         </tr>
                                     <?php } ?>

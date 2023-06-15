@@ -20,7 +20,7 @@ class Pengguna extends CI_Controller {
 
 		$data['user']=$this->Pengguna_model->read();
 		$data['error'] = '';
-        $data['result'] = $this->db->order_by('id','DESC')
+        $data['result'] = $this->db->order_by('id_pengguna','DESC')
                                     ->get('pengguna')
                                     ->result();
 		$this->load->view('admin/pengguna/data', $data);
@@ -29,7 +29,7 @@ class Pengguna extends CI_Controller {
 	public function edit($id)
 	{
 
-        $data['detail'] = $this->db->get_where('pengguna',['id' => $id])->row();
+        $data['detail'] = $this->db->get_where('pengguna',['id_pengguna' => $id])->row();
 		$this->load->view('admin/pengguna/ubah', $data);
 
 	}
@@ -65,8 +65,8 @@ class Pengguna extends CI_Controller {
 	}
 
 	public function delete($id){
-	    $_id = $this->db->get_where('pengguna',['id' => $id])->row();
-	    $query = $this->db->delete('pengguna',['id'=>$id]);
+	    $_id = $this->db->get_where('pengguna',['id_pengguna' => $id])->row();
+	    $query = $this->db->delete('pengguna',['id_pengguna'=>$id]);
 	    if($query){
 	        unlink("images/pengguna/".$_id->gambar);
 	    }
@@ -90,7 +90,7 @@ class Pengguna extends CI_Controller {
              'no'=> $this->input->post('no'),
              'akses'=> $this->input->post('akses')
             );
-            $query = $this->db->update('pengguna', $data, array('id' => $id));
+            $query = $this->db->update('pengguna', $data, array('id_pengguna' => $id));
         }
         else{
             $_data = array('upload_data' => $this->upload->data());

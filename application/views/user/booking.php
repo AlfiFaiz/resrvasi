@@ -59,12 +59,6 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="booking-rooms-tab">
-                            <ul class="nav" role="tablist">
-                                <li  class="active"><a href="#booking" data-toggle="tab"><span class="tab-border">1</span><span>Info Pemesanan</span></a></li>
-                                <li><a href="#personal" data-toggle="tab"><span class="tab-border">2</span><span>Data Pribadi</span></a></li>
-                            </ul>
-                        </div>
                         <div class="text-right"><a href="<?= site_url('Welcome/index')?>" class="btn btn-primary">Kembali ke Beranda</a></div><br><br>
                         <div class="service-tab-desc text-left mt-60">
                             <div class="tab-content">
@@ -87,14 +81,18 @@
                                             </div>
                                         </div>
                                         <div class="single-room-booking-form mt-60">
-                                            <div class="booking_form_inner">
+                                            <form action="<?=site_url('Auth/do_booking')?>" method="post">
+                                                <div class="date-to mb-15">
+                                                    <input type="text" placeholder="id pengguna" value="<?=$this->session->userdata('id_pengguna')?>" readonly="" name="id_pengguna" hidden>
+                                                    <input type="text" placeholder="Nama Lengkap" value="<?=$this->session->userdata('nama')?>" readonly="" name="nama">
+                                                </div>
+                                                <div class="booking_form_inner">
                                                     <div class="single-form-part">
-                                                        <div class="date-to mb-20">
-                                                    <form action="<?=site_url('Auth/do_booking')?>" method="post">
+                                                    <div class="date-to mb-15">
                                                             <input id="txtCheckin" value="Arrive date" name="tgl_in">
                                                             <i class="mdi mdi-calendar-text"></i>
                                                         </div>
-                                                        <div class="select-option">
+                                                        <div class="date-to mb-15">
                                                             <select name="jumlah">
                                                                 <option selected>Jumlah Kamar</option>
                                                                 <option value="1">1</option>
@@ -103,49 +101,32 @@
                                                         </div>
                                                     </div>
                                                     <div class="single-form-part">
-                                                        <div class="date-to mb-20">
+                                                        <div class="date-to mb-15">
                                                             <input id="txtCheckout" value="Departure Date" name="tgl_out">
                                                             <i class="mdi mdi-calendar-text"></i>
                                                         </div>
-                                                        <div class="select-option">
+                                                        <div class="date-to mb-15">
                                                             <input type="text" readonly name="jenis" name="jenis" value="<?=$detail->jenis?>" >
                                                         </div>
                                                     </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="personal">
-                                    <div class="personal-info-details">
-                                        <div class="booking-info-inner">
-                                           
-                                                <div class="booking-form-list">
-                                                    <div class="single-form-part">
-                                                        <div class="name mb-15">
-                                                            <input type="text" placeholder="Nama Lengkap" value="<?=$this->session->userdata('nama')?>" readonly="" name="nama">
-                                                        </div>
-                                                    </div>
-                                                   
-                                                    <div class="single-form-part">
-                                                        <div class="mail mb-15">
-                                                            <input type="text" placeholder="Email" value="<?=$this->session->userdata('email')?>" readonly="" name="email">
-                                                            <i class="mdi mdi-calendar-text"></i>
-                                                        </div>
-                                                    </div>
 
-                                                     <div class="single-form-part">
-                                                        <div class="name mb-15">
-                                                            <input type="tell" placeholder="No Telp." value="<?=$this->session->userdata('no')?>" readonly="" name="no">
+                                                    <div class="single-form-part">
+                                                    <div class="date-to mb-15">
+                                                            <input type="text" placeholder="No Telp." value="<?=$this->session->userdata('no')?>" readonly="" name="no">
+                                                        </div>
+                                                        <div class="date-to mb-15">
+                                                            <input type="text" placeholder="Email" value="<?=$this->session->userdata('email')?>" readonly="" name="email">
                                                         </div>
                                                     </div>
-                                                </div>
                                                 <div class="prve-next-box mt-20">
                                                     <div class="back-link">
                                                         <a href="<?= site_url('Welcome')?>">Cancel</a>
                                                     </div>
                                                     <button type="submit">Pesan Sekarang</button>
                                                 </div>
-                                           </form>
+                                            </form>
+                                        </div>
+                                        </div>
                                         </div>
                                     </div>        
                                 </div>

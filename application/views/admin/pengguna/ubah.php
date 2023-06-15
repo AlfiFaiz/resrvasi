@@ -21,7 +21,7 @@
 
         
         if (isset($kmr)) {
-            $id = $kmr->id;
+            $id = $kmr->id_transaksi;
             $jenis=$kmr->jenis;
             $harga=$kmr->harga;
             $jumlah=$kmr->jumlah;
@@ -164,11 +164,11 @@
                                             <h3 class="text-center">Ubah Data Pengguna <?= $detail->nama ?></h3>
                                         </div>
                                         <hr>
-                                        <form action="<?=site_url('Pengguna/update/'.$detail->id)?>" method="post" novalidate="novalidate" enctype="multipart/form-data">
+                                        <form action="<?=site_url('Pengguna/update/'.$detail->id_pengguna)?>" method="post" novalidate="novalidate" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <img src="<?= base_url('images/pengguna/'.$detail->gambar)?>" width="200px" height="200px">
                                             </div>
-                                            <input type="hidden" name="id" value="<?=$detail->id?>">
+                                            <input type="hidden" name="id" value="<?=$detail->id_pengguna?>">
                                                 <div class="form-group has-success">
                                                     <label for="cc-name" class="control-label mb-1">Nama Lengkap</label>
                                                     <input id="cc-name" value="<?= $detail->nama ?>" name="nama" type="text" class="form-control">

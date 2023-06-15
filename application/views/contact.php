@@ -48,7 +48,10 @@
           background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
 
         }
+
     </style>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <body>
 
 <div class="banner">    	   
@@ -65,76 +68,65 @@
 </div>
 
 
-        <div class="our-room text-center ptb-80 white-bg">
-        <section style="margin: 3%;">
-      <div class="col-sm-6">
-              <h2 class="section-heading mb-4">
-                <span >ME HOTEL</span>
-              </h2>
-              <br>
-            <p  style="text-align: justify;">
-            Veranda Serviced Residence @ Puri terletak di jantung distrik prestisius Jakarta Barat. Sangat dekat dari Puri Central Business District.
-            <br>
-            Veranda Serviced Residence @ Puri adalah tempat peristirahatan yang tenang dari keramaian dan hiruk pikuk Metropolitan Jakarta namun dekat dengan Lippo Mall Puri dan Mal Taman Anggrek, kawasan hiburan Jakarta Barat yang semarak.
-            <br>
-
-            Manjakan diri Anda dengan suasana mewah semi retro dengan 63 kamar kami yang modern dan luas dengan kamar mandi marmer en-suite yang dipadukan dengan kenyamanan dan suasana santai.
-            <br>
-
-            Fasilitas kami yang luar biasa meliputi restoran khas Indonesia, taman bermain anak-anak, Perpustakaan, gym yang dirancang Italia, dan kolam renang luar ruangan.
-						</p>
+<section id="D" class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner bg-faded text-center rounded">
+                  <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <h3 class="w3-center">WHERE I WORK</h3>
+      <p class="w3-center"><em>I'd love your feedback!</em></p>
+      <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.57741813814312!2d107.59082387437581!3d-6.86197222726383!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6bbbafdbb23%3A0x57f0a75328ea61c5!2sComputer%20Science%20Building%20UPI%20-%20FPMIPA%20C!5e0!3m2!1sen!2sid!4v1686810055480!5m2!1sen!2sid" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="w3-col m8 w3-panel">
+          <div class="w3-large w3-margin-bottom">
+            <i
+              class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Bandung, Indonesia<br />
+            <i
+              class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Phone: +62 151515<br />
+            <i
+              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Email: mehotel@gmail.com<br />
           </div>
-			<br>
-			<br>
-			<br>
-			<br>
-      <div class="col-sm-6">				
-          <img
-							class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-							src="<?php echo base_url('foto/photos/banner.jpg'); ?>"
-							alt="...""/>
-        </div>
-    </section>
-    <br>
-    <br>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title mb-75">
-                        <br>
-                          <br>
-                          <h2>Jenis <span>Kamar</span></h2>
-                            <p>Kami menyediakan berbagai jenis kamar, baik untuk sendiri, pasangan, maupun keluarga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="our-room-show">
-                    <div class="row">
-                        <div class="carousel-list">
-                            <?php foreach($kamar as $kmr) {?>
-                            <div class="col-md-4">
-                                <div class="single-room">
-                                    <div class="room-img">
-                                        <a href="#"><img src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
-                                    </div>
-                                    <div class="room-desc">
-                                        <div class="room-name">
-                                            <h3><a href="#"><?=$kmr->jenis?></a></h3>
-                                        </div>
-                                        <div class="room-rent">
-                                            <h6>Rp <?=$kmr->harga?> / <label>Malam</label></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           <?php } ?>
-                            
-                        </div>
-                    </div>
-                </div>
+          <form  method = "post" action = "">
+            <div class="w3-row-padding" style="margin: 0 -16px 8px -16px">
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  placeholder="Nama"
+                  name = "nama" type = "text" id = "nama" required autocomplete="off">
+              </div>
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Email"
+                  required
+                  name="email" id="email" autocomplete="off"/>
+              </div>
             </div>
+            <textarea
+              class="w3-input w3-border"
+              type="text"
+              placeholder="Message"
+              required
+              name="pesan" id="pesan" autocomplete="off"/></textarea>
+            <button
+              class="w3-button w3-black w3-right w3-section"
+              type="submit" id = "add" name = "add"  >
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </form>
+            </div>
+          </div>
         </div>
-        <!--Our room end-->
+      </div>
+    </section>
 
     </div>
   <!-- Placed js at the end of the document so the pages load faster -->

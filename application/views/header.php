@@ -36,7 +36,8 @@
 </head>
 
 <body id="home">
-
+  
+  <center>
 <!-- header -->
 <nav class="navbar  navbar-default" role="navigation">
   <div class="container">
@@ -48,17 +49,28 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo site_url('utama/index');?>"><img src=""  alt="ME HOTEL"></a>
+      <a class="navbar-brand" href=""><img src=""  alt="ME HOTEL"></a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-      
-      <ul class="nav navbar-nav">        
-        <li><a href="<?php echo site_url('utama/index');?>">Home </a></li>
-        <li><a href="<?php echo site_url('Auth/login');?>">Reservasi</a></li>        
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">        
+      <?php if($this->session->is_logged_in){ ?>
+        <li><a href="<?php echo site_url('welcome/index');?>">Home </a></li>
+        <li><a href="<?php echo site_url('utama/login');?>">About Me</a></li>
+        <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>           
+        <li><a href="<?= site_url('Auth/konfirmasi/').$this->session->userdata('id_pengguna')?>">pesanan</a></li>
+        <li><a href="<?= site_url('Auth/logout')?>">Logout</a></li>   
       </ul>
-    </div><!-- Wnavbar-collapse -->
+      <?php } else { ?>
+        <li><a href="<?php echo site_url('utama/index');?>">Home </a></li>
+        <li><a href="<?php echo site_url('utama/login');?>">About Me</a></li> 
+        <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>          
+            <li><a href="<?php echo site_url('Auth/login');?>">Reservasi</a></li>        
+          </ul>
+          <?php } ?>
+  </div><!-- Wnavbar-collapse -->
+</center>
+    <!-- Collect the nav links, forms, and other content for toggling -->
   </div><!-- container-fluid -->
 </nav>
 <!-- header -->

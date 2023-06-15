@@ -203,7 +203,17 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count"><?=$this->db->count_all('transaksi');?></span>
+                            <?php 
+                            // $this->db->select('*');
+                            // $this->db->from('tranksasi');
+                            // $this->db->like('Confirm');
+                            // echo $this->db->count_all_results()
+                            ?>
+                            <span class="count"> <?php 
+                            $this->db->select('*');
+                            $this->db->from('transaksi');
+                            $this->db->like('status', 'Confirm'); 
+                            echo $this->db->count_all_results();?></span>
                         </h4>
                         <p class="text-light">Transaksi Terkonfirmasi</p>
 
@@ -230,7 +240,11 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count"><?=$this->db->count_all('transaksi');?></span>
+                            <span class="count"><?php 
+                            $this->db->select('*');
+                            $this->db->from('transaksi');
+                            $this->db->like('status', 'Pending'); 
+                            echo $this->db->count_all_results();?></span>
                         </h4>
                         <p class="text-light">Transaksi Pending</p>
 

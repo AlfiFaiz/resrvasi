@@ -15,4 +15,8 @@ class utama extends CI_Controller {
 		$data['kamar']=$this->Kamar_model->read();
 			$this->load->view('index', $data);
 	}
+	public function contact()
+	{
+			$this->load->view('contact');
+	}
 }

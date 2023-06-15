@@ -26,11 +26,13 @@ class Auth extends CI_Controller {
 			if ($login != NULL) {
 
 				$data = array(
+					'id_pengguna' => $login->id_pengguna,
 					'nama' 	=> $login->nama,
 					'email' => $login->email,
 					'no' 	=> $login->no,
 					'akses'=> $login->akses,
-					'gambar'=> $login->gambar
+					'gambar'=> $login->gambar,
+					"is_logged_in" => true
 				);
 				if ($this->input->post('no')==$login->no)
 				{
@@ -71,32 +73,34 @@ class Auth extends CI_Controller {
 
 	public function do_booking(){
 		if (! $this->session->userdata('email')) redirect('Auth/login');
-		$nama = $this->input->post('nama');
-		$email = $this->input->post('email');
-		$no = $this->input->post('no');
+		$id_pengguna = $this->input->post('id_pengguna');
 		$tgl_in = $this->input->post('tgl_in');
 		$tgl_out = $this->input->post('tgl_out');
 		$jenis = $this->input->post('jenis');
 		$jumlah = $this->input->post('jumlah');
+		$no = $this->input->post('no');
+		$email = $this->input->post('email');
+		$nama = $this->input->post('nama');
  
 		$data = array(
-			'nama' => $nama,
-			'email' => $email,
-			'no' => $no,
+			'id_pengguna' => $id_pengguna,
 			'tgl_in' => $tgl_in,
 			'tgl_out' => $tgl_out,
 			'jenis' => $jenis,
 			'jumlah' => $jumlah,
+			'nama' => $nama,
+			'no' => $no,
+			'email' => $email,
 			);
 		$this->Auth_model->input_data($data,'transaksi');
 		$this->session->set_flashdata('msg', '<p style="color:green;">Anda berhasil melakukan pemesanan!</p>');
-		redirect('Auth/konfirmasi',$data);
+		redirect('welcome/index',$data);
 	}
 
-	public function konfirmasi()
+	public function konfirmasi($id_pengguna)
 	{
 		if (! $this->session->userdata('email')) redirect('Auth/login');
-		$data['trans'] = $this->db->get_where('transaksi',['email' => $this->session->userdata('email')])->row();
+		$data['trans'] = $this->Transaksi_model->read_by($id_pengguna);
 		$data['kamar'] = $this->Transaksi_model->getAllTrans();
 		$this->load->view('user/konfirmasi', $data);
 	}

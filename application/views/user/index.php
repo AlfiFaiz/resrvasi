@@ -38,6 +38,7 @@
 <body id="home">
 
 <!-- header -->
+
 <nav class="navbar  navbar-default" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,26 +49,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo site_url('utama/index');?>"><img src=""  alt="ME HOTEL"></a>
+      <a class="navbar-brand" href=""><img src=""  alt="ME HOTEL"></a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-      
-      <ul class="nav navbar-nav">        
-      <li><a href="#">Home</a></li>
-                                                    <?php
-                                                    $nomor = 1;
-                                                        foreach ($trans as $data ) {
-                                                            if ($data->email == $this->session->userdata('email')): 
-                                                    ?>
-                                                    <li><a href="<?= site_url('Auth/konfirmasi/')?>">Pesanan <?php echo $nomor?></a></li>
-                                                    <?php  
-                                                    $nomor++;
-                                                  endif; } ?>
-                                                    <li><a href="<?= site_url('Auth/logout')?>">Logout</a></li>       
-      </ul>
-    </div><!-- Wnavbar-collapse -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">        
+      <li><a href="<?php echo site_url('welcome/index');?>">Home </a></li>
+      <li><a href="<?php echo site_url('utama/login');?>">About Me</a></li>        
+      <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>        
+      <li><a href="<?= site_url('Auth/konfirmasi/').$this->session->userdata('id_pengguna')?>">pesanan</a></li>
+      <li><a href="<?= site_url('Auth/logout')?>">Logout</a></li>         
+    </ul>
+  </div><!-- Wnavbar-collapse -->
   </div><!-- container-fluid -->
 </nav>
 <!-- header -->

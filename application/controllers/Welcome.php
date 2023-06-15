@@ -18,14 +18,9 @@ class Welcome extends CI_Controller {
 		}else{
 			$data['kamar']=$this->Kamar_model->read();
 			$data['error'] = '';
-	        $data['result'] = $this->db->order_by('id','DESC')
-	                                    ->get('kamar')
-	                                    ->result();
+	        $data['result'] = $this->db->order_by('id','DESC')->get('kamar')->result();
 	        $data['trans']=$this->Transaksi_model->read();
 			$data['error'] = '';
-	        $data['trans'] = $this->db->order_by('id','DESC')
-	                                    ->get('transaksi')
-	                                    ->result();
 			$this->load->view('user/index', $data);
 		}
 	}
