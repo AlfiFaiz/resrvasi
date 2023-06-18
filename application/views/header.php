@@ -49,21 +49,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href=""><img src=""  alt="ME HOTEL"></a>
     </div>
+    <a class="navbar-brand" href=""><img src=""  alt="ME HOTEL"></a>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">        
       <?php if($this->session->is_logged_in){ ?>
         <li><a href="<?php echo site_url('welcome/index');?>">Home </a></li>
-        <li><a href="<?php echo site_url('utama/login');?>">About Me</a></li>
+        <li><a href="<?php echo site_url('utama/about');?>">About Me</a></li>
         <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>           
         <li><a href="<?= site_url('Auth/konfirmasi/').$this->session->userdata('id_pengguna')?>">pesanan</a></li>
         <li><a href="<?= site_url('Auth/logout')?>">Logout</a></li>   
       </ul>
       <?php } else { ?>
         <li><a href="<?php echo site_url('utama/index');?>">Home </a></li>
-        <li><a href="<?php echo site_url('utama/login');?>">About Me</a></li> 
+        <li><a href="<?php echo site_url('utama/about');?>">About Me</a></li> 
         <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>          
             <li><a href="<?php echo site_url('Auth/login');?>">Reservasi</a></li>        
           </ul>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/shortcode/shortcodes.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/stylee.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css');?>">
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
+    <link rel="icon" href="<?=base_url('/images/')?>">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
@@ -82,40 +82,47 @@
                                         </div>
                                         <div class="single-room-booking-form mt-60">
                                             <form action="<?=site_url('Auth/do_booking')?>" method="post">
+                                                <div class="single-form-part"> 
                                                 <div class="date-to mb-15">
+                                                    <label style="color: white;">NAMA</label>
                                                     <input type="text" placeholder="id pengguna" value="<?=$this->session->userdata('id_pengguna')?>" readonly="" name="id_pengguna" hidden>
-                                                    <input type="text" placeholder="Nama Lengkap" value="<?=$this->session->userdata('nama')?>" readonly="" name="nama">
+                                                    <input type="text" placeholder="Nama Lengkap" value="<?=$this->session->userdata('nama')?>" readonly="" name="nama" disabled>
+                                                </div>
                                                 </div>
                                                 <div class="booking_form_inner">
                                                     <div class="single-form-part">
                                                     <div class="date-to mb-15">
-                                                            <input id="txtCheckin" value="Arrive date" name="tgl_in">
-                                                            <i class="mdi mdi-calendar-text"></i>
-                                                        </div>
-                                                        <div class="date-to mb-15">
-                                                            <select name="jumlah">
-                                                                <option selected>Jumlah Kamar</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                            </select>
-                                                        </div>
+                                                        <label style="color: white;">Arrive Date</label>
+                                                        <input id="txtCheckin" value="Arrive Date" name="tgl_in">
                                                     </div>
-                                                    <div class="single-form-part">
-                                                        <div class="date-to mb-15">
+                                                    <div class="date-to mb-15">
+                                                        <label style="color: white;">JUMLAH KAMAR</label>
+                                                        <select name="jumlah" placeholder="jumlah kamar">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="single-form-part">
+                                                    <div class="date-to mb-15">
+                                                            <label style="color: white;">Departure Date</label>
                                                             <input id="txtCheckout" value="Departure Date" name="tgl_out">
-                                                            <i class="mdi mdi-calendar-text"></i>
                                                         </div>
                                                         <div class="date-to mb-15">
-                                                            <input type="text" readonly name="jenis" name="jenis" value="<?=$detail->jenis?>" >
+                                                        <label style="color: white;">JENIS KAMAR</label>
+                                                            <input type="text" readonly name="jenis" name="jenis" value="<?=$detail->jenis?>" disabled>
                                                         </div>
                                                     </div>
 
                                                     <div class="single-form-part">
                                                     <div class="date-to mb-15">
-                                                            <input type="text" placeholder="No Telp." value="<?=$this->session->userdata('no')?>" readonly="" name="no">
+                                                    <label style="color: white;">NO TELEPON</label>
+                                                            <input type="text" placeholder="No Telp." value="<?=$this->session->userdata('no')?>" readonly="" name="no" disabled>
                                                         </div>
                                                         <div class="date-to mb-15">
-                                                            <input type="text" placeholder="Email" value="<?=$this->session->userdata('email')?>" readonly="" name="email">
+                                                        <label style="color: white;">EMAIL</label>
+                                                            <input type="text" placeholder="Email" value="<?=$this->session->userdata('email')?>" readonly="" name="email" disabled>
                                                         </div>
                                                     </div>
                                                 <div class="prve-next-box mt-20">
@@ -137,11 +144,9 @@
             </div>
         </div>
 </div>
-    
-</body>
-</html>
+
 <!-- <script src="<?= base_url('assets/js/vendor/jquery-1.12.0.min.js');?>"></script> -->
-    
+
     <script src="<?= base_url('assets/js/bootstrap.min.js');?>"></script>
    
    <!--  <script src="<?= base_url('assets/js/waypoints.min.js');?>"></script>
@@ -159,3 +164,5 @@
     <script src="<?= base_url('assets/js/jquery.magnific-popup.js');?>"></script>
     <script src="<?= base_url('assets/js/plugins.js');?>"></script>
     <script src="<?= base_url('assets/js/main.js');?>"></script> -->
+    
+    </html>

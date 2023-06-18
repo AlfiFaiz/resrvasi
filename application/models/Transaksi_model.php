@@ -16,12 +16,11 @@ class Transaksi_model extends CI_Model {
         return $query->result();
 	}
 	
-	// public function read_by($id_pengguna)
-	// {
-	// 	$this->db->where('id_pengguna',$id_pengguna);
-	// 	$query = $this->db->get('transaksi');
-	// 	return $query->row() ;
-	// }
+	public function read_bybukti($id_pengguna)
+	{
+		$query = $this->db->query("SELECT * FROM transaksi INNER JOIN pengguna ON pengguna.id_pengguna = transaksi.id_pengguna WHERE transaksi.id_transaksi = '$id_pengguna'");
+        return $query->result();
+	}
 
 	public function input_data($data,$table){
 		$this->db->insert($table,$data);

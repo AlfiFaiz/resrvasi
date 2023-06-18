@@ -54,15 +54,14 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <body>
 
-<div class="banner">    	   
-    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide">
+<div class="banner" >    	   
+    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
     <div class="welcome-message">
         <div class="wrap-info">
-            <div class="information">
-                <h1  class="animated fadeInDown">Best hotel in Gerlong</h1>
-                <p class="animated fadeInUp">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
+        <div class="information">
+            <marquee><h1  class="animated fadeInDown" style="color:white;">Best hotel in Gerlong</h1></marquee>
+                <p class="animated fadeInUp" style="color:white;">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
             </div>
-            <a href="#information" class="arrow-nav scroll wowload fadeInDownBig"><i class="fa fa-angle-down"></i></a>
         </div>
     </div>
 </div>

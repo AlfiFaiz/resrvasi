@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Kamar</title>
+    <title>Data Pengguna</title>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="icon" href="<?=base_url()?>/images/logo.png">
 
     <link rel="stylesheet" href="<?= base_url('assets/vendors/bootstrap/dist/css/bootstrap.min.css');?>">
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
+
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
@@ -117,7 +117,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Data Kamar</h1>
+                        <h1>Pesan</h1>
                     </div>
                 </div>
             </div>
@@ -135,59 +135,33 @@
         <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="row">
+
                     <div class="col-lg-12">
-                        <div class="toast">
-                            <div class="toast-body">
-                               <?=$this->session->flashdata('msg');?>
-                            </div>
-                        </div>
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title"><button class="btn btn-warning " data-toggle="modal" data-target="#contact-modal">Tambah Data</button></strong>
                             </div>
                             <div class="card-body">
                                 <table class="table">
                                     <thead class="thead-dark">
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Gambar</th>
-                                            <th scope="col">Jenis Kamar</th>
-                                            <th scope="col">Harga</th>
-                                            <th scope="col">Jumlah</th>
-                                            <th scope="col">Opsi</th>
+                                            <th scope="col">Nama Lengkap</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">pesan</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php 
                                             $i = 1;
-                                            foreach ($result as $kmr ) {
-                                                 $tampil = $this->db->get_where('transaksi',array('jenis' => $kmr->jenis))->row(); 
+                                            foreach ($pesan as $user ) {
                                          ?>
                                         <tr>
                                             <td><?= $i++ ?></td>
-                                            <td><img src="<?= base_url('images/kamar/'.$kmr->gambar)?>" width="150px" height="100px"></td>
-                                            <td><?=$kmr->jenis ?></td>
-                                            <td><?=$kmr->harga ?></td>
-                                            <?php if ($tampil == true) {
-                                               $tampil = $kmr->jumlah - $tampil->jumlah;
-                                            }else{
-                                                $tampil = $kmr->jumlah;
-                                            } ?>
-                                            <td><?=  $tampil ?></td>
-                                            <td>
-                                                <a class="btn btn-success" href="<?=site_url('Kamar/edit/'.$kmr->id)?>">Edit</a>
-                                                <a class="btn btn-danger" href="<?=site_url('Kamar/delete/'.$kmr->id)?>" onclick="return confirm('Are U Sure?')">Delete</a>
-                                            </td>
-                                            <!-- <td>
-                                                <?php 
-                                                    if($cat->sold_049==1){ 
-                                                        ?>
-                                                        <button class="btn btn-default">SOLD OUT</button>
-                                                 <?php
-                                                    }else{  ?>
-                                                    <a class="btn btn-warning" href="<?=site_url('cats049/sale/'.$cat->id_049)?>">Sale</a>
-                                                <?php } ?>
-                                            </td> -->
+                                            <td><?=$user->nama ?></td>
+                                            <td><?=$user->email ?></td>
+                                            <td><?=$user->pesan ?></td>
+
                                         </tr>
                                     <?php } ?>
                                     </tbody>
@@ -212,27 +186,36 @@
                     <a class="close" data-dismiss="modal">×</a>
                     
                 </div>
-                <form action="<?=site_url('Kamar/do_upload')?>" method="post" enctype="multipart/form-data" novalidate="novalidate">
-                    <div id="pay-invoice">
+                    <form action="<?=site_url('Pengguna/do_upload')?>" method="post" enctype="multipart/form-data" novalidate="novalidate">
+                        <div id="pay-invoice">
                             <div class="card-body">
                                 <hr>
                                 <div class="form-group has-success">
-                                    <label for="cc-name" class="control-label mb-1">Jenis Kamar</label>
-                                    <input id="cc-name"  name="jenis" type="text" class="form-control">
+                                    <label for="cc-name" class="control-label mb-1">Nama Lengkap</label>
+                                    <input id="cc-name"  name="nama" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="cc-number" class="control-label mb-1">Harga</label>
-                                    <input id="cc-number" name="harga" type="tel" class="form-control" >
+                                    <label for="cc-number" class="control-label mb-1">Email</label>
+                                    <input id="cc-number" name="email" type="tel" class="form-control" >
                                 </div>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <div class="form-group">
-                                            <label for="cc-exp" class="control-label mb-1">Jumlah</label>
-                                            <input id="cc-exp" name="jumlah" type="tel" class="form-control "  >
+                                            <label for="cc-exp" class="control-label mb-1">No. Telp</label>
+                                            <input id="cc-exp" name="no" type="tel" class="form-control "  >
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <label for="x_card_code" class="control-label mb-1">File Gambar</label>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-j" class="control-label mb-1">Hak Akses</label>
+                                            <select id="cc-j" name="akses" class="form-control">
+                                                <option>Admin</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="x_card_code" class="control-label mb-1">Foto</label>
                                         <div class="input-group">
                                             <input id="x_card_code" name="gambar" type="file" class="form-control" >
                                         </div>
@@ -241,10 +224,10 @@
                                 <div>
                                     <input name="simpan" id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" value="Simpan">
                                 </div>
-                                
-                            </div>
+                                    
                         </div>
-                    </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

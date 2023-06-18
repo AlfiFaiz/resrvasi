@@ -64,79 +64,42 @@
 </div>
 
 
-        <div class="our-room text-center ptb-80 white-bg">
-        <section style="margin: 3%;">
-      <div class="col-sm-6">
-              <h2 class="section-heading mb-4">
-                <span >ME HOTEL</span>
-              </h2>
-              <br>
-            <p  style="text-align: justify;">
-            ME HOTEL terletak di jantung distrik prestisius Jakarta Barat. Sangat dekat dari Puri Central Business District.
-            <br>
-            ME HOTEL adalah tempat peristirahatan yang tenang dari keramaian dan hiruk pikuk Metropolitan Jakarta namun dekat dengan Lippo Mall Puri dan Mal Taman Anggrek, kawasan hiburan Jakarta Barat yang semarak.
-            <br>
-
-            Manjakan diri Anda dengan suasana mewah semi retro dengan 63 kamar kami yang modern dan luas dengan kamar mandi marmer en-suite yang dipadukan dengan kenyamanan dan suasana santai.
-            <br>
-
-            Fasilitas kami yang luar biasa meliputi restoran khas Indonesia, taman bermain anak-anak, Perpustakaan, gym yang dirancang Italia, dan kolam renang luar ruangan.
-						</p>
-          </div>
-			<br>
-			<br>
-			<br>
-			<br>
-      <div class="col-sm-6">				
-          <img
-							class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-							src="<?php echo base_url('foto/photos/banner.jpg'); ?>"
-							alt="...""/>
-        </div>
-    </section>
-    <br>
-    <br>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title mb-75">
-                        <br>
-                          <br>
-                          <h2>Jenis <span>Kamar</span></h2>
-                            <p>Kami menyediakan berbagai jenis kamar, baik untuk sendiri, pasangan, maupun keluarga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="our-room-show">
-                    <div class="row">
-                        <div class="carousel-list">
-                            <?php foreach($kamar as $kmr) {?>
-                            <div class="col-md-4">
-                                <div class="single-room">
-                                    <div class="room-img">
-                                        <a href="#"><img src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
-                                    </div>
-                                    <div class="room-desc">
-                                        <div class="room-name">
-                                            <h3><a href="#"><?=$kmr->jenis?></a></h3>
-                                        </div>
-                                        <div class="room-rent">
-                                            <h6>Rp <?=$kmr->harga?> / <label>Malam</label></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           <?php } ?>
-                            
-                        </div>
-                    </div>
-                </div>
+<section id="B" class="page-section about-heading">
+      <div class="container">
+        <img
+          class="img-fluid rounded about-heading-img mb-3 mb-lg-0"
+          src="assets/img/2.jpg"
+          alt="..." />
+        <div class="about-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-upper"
+                    >Strong Coffee, Strong Roots</span
+                  >
+                  <span class="section-heading-lower">About Our Cafe</span>
+                </h2>
+                <p>
+                  Founded in 1987 by the Hernandez brothers, our establishment
+                  has been serving up rich coffee sourced from artisan farmers
+                  in various regions of South and Central America. We are
+                  dedicated to travelling the world, finding the best coffee,
+                  and bringing back to you here in our cafe.
+                </p>
+                <p class="mb-0">
+                  We guarantee that you will fall in
+                  <em>lust</em>
+                  with our decadent blends the moment you walk inside until you
+                  finish your last sip. Join us for your daily routine, an
+                  outing with friends, or simply just to enjoy some alone time.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-        <!--Our room end-->
-
-    </div>
-  <!-- Placed js at the end of the document so the pages load faster -->
+      </div>
+    </section>
 
     <!-- jquery latest version -->
     <script src="<?= base_url('assets/js/vendor/jquery-1.12.0.min.js');?>"></script>

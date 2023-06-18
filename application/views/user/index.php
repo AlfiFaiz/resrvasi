@@ -56,7 +56,7 @@
     <ul class="nav navbar-nav">        
       <li><a href="<?php echo site_url('welcome/index');?>">Home </a></li>
       <li><a href="<?php echo site_url('utama/login');?>">About Me</a></li>        
-      <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>        
+      <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li> 
       <li><a href="<?= site_url('Auth/konfirmasi/').$this->session->userdata('id_pengguna')?>">pesanan</a></li>
       <li><a href="<?= site_url('Auth/logout')?>">Logout</a></li>         
     </ul>
@@ -117,12 +117,12 @@
 <body>
 
 <div class="banner">    	   
-    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide">
+    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
     <div class="welcome-message">
         <div class="wrap-info">
             <div class="information">
-            <marquee><h1  class="animated fadeInDown">Best hotel in Gerlong</h1></marquee>
-                <p class="animated fadeInUp">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
+            <marquee><h1  class="animated fadeInDown" style="color:white;">Best hotel in Gerlong</h1></marquee>
+                <p class="animated fadeInUp" style="color:white;">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
             </div>
             <a href="#information" class="arrow-nav scroll wowload fadeInDownBig"><i class="fa fa-angle-down"></i></a>
         </div>

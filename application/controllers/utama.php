@@ -19,4 +19,13 @@ class utama extends CI_Controller {
 	{
 			$this->load->view('contact');
 	}
+	public function about()
+	{
+			$this->load->view('about');
+	}
+	public function pesan()
+	{
+		$data["pesan"] = $this->Pengguna_model->pesananall();
+		$this->load->view('admin/pesan', $data);
+	}
 }
