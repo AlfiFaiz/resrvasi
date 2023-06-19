@@ -12,7 +12,7 @@ class Transaksi_model extends CI_Model {
 	public function read_by($id_pengguna)
 	{
 		$query = $this->db->query("SELECT * FROM transaksi INNER JOIN pengguna ON pengguna.id_pengguna = transaksi.id_pengguna WHERE transaksi.id_pengguna = '$id_pengguna' ORDER BY
-		transaksi.tgl_in ASC");
+		transaksi.status ASC");
         return $query->result();
 	}
 	

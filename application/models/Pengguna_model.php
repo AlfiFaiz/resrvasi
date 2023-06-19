@@ -11,7 +11,7 @@ class Pengguna_model extends CI_Model {
 	
 	public function read_by($id)
 	{
-		$this->db->where('id',$id);
+		$this->db->where('id_pengguna',$id);
 		$query = $this->db->get('pengguna');
 		return $query->row() ;
 	}

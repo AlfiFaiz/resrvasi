@@ -50,7 +50,7 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-    <a class="navbar-brand" href=""><img src=""  alt="ME HOTEL"></a>
+    <a class="navbar-brand" href=""><img style="width: 30px;" src="<?php echo base_url('foto/photos/logo.png');?>" alt="ME HOTEL"></a>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">        
