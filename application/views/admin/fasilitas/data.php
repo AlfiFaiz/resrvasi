@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Kamar</title>
+    <title>Fasilitas</title>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -118,7 +118,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Confirm</h1>
+                        <h1>Fasilitas</h1>
                     </div>
                 </div>
             </div>
@@ -143,38 +143,34 @@
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title"><button class="btn btn-warning " data-toggle="modal" data-target="#contact-modal">Tambah Data</button></strong>
+                            </div>
                             <div class="card-body">
                                 <table class="table">
                                     <thead class="thead-dark">
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Check-in</th>
-                                            <th scope="col">Check-out</th>
-                                            <th scope="col">Jumlah Kamar</th>
-                                            <th scope="col">Tipe Kamar</th>
-                                            <th scope="col">Nama</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">No. Telp</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Nama Fasilitas</th>
+                                            <th scope="col">Deskripsi</th>
+                                            <th scope="col">Gambar</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php 
-                                            $i = 1;
-                                            foreach ($result as $trans ) {
-                                         ?>
+                                        <!-- get data fasilitas -->
+                                        <?php $no=1; foreach ($fasilitas as $key) { ?>
                                         <tr>
-                                            <td><?= $i++ ?></td>
-                                            <td><?=$trans->tgl_in ?></td>
-                                            <td><?=$trans->tgl_out ?></td>
-                                            <td><?=$trans->jumlah ?></td>
-                                            <td><?=$trans->jenis ?></td>
-                                            <td><?=$trans->nama ?></td>
-                                            <td><?=$trans->email ?></td>
-                                            <td><?=$trans->no ?></td>
-                                            <td><?=$trans->status ?></td>
+                                            <th scope="row"><?=$no++?></th>
+                                            <td><?=$key->nama_fasilitas?></td>
+                                            <td><?=$key->deskripsi?></td>
+                                            <td><img src="<?=base_url('images/fasilitas/')?><?=$key->gambar?>" style="height: 100px; width: 100px;"></td>
+                                            <td>
+                                                <a href="<?=site_url('Fasilitas/edit/')?><?=$key->id_fasilitas?>" class="btn btn-warning">Edit</a>
+                                                <a href="<?=site_url('Fasilitas/delete/')?><?=$key->id_fasilitas?>" class="btn btn-danger">Delete</a>
+                                            </td>
                                         </tr>
-                                    <?php } ?>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
 
@@ -190,9 +186,69 @@
               
 
     </div>
+    <div id="contact-modal" class="modal fade" role="dialog" style="margin-top: 200px">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal">×</a>
+                    
+                </div>
+                <form action="<?=site_url('Fasilitas/do_upload')?>" method="post" enctype="multipart/form-data" novalidate="novalidate">
+                    <div id="pay-invoice">
+                            <div class="card-body">
+                                <hr>
+                                <div class="form-group has-success">
+                                    <label for="cc-name" class="control-label mb-1">Nama Fasilitas</label>
+                                    <input id="cc-name"  name="nama_fasilitas" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cc-number" class="control-label mb-1">Deskripsi</label>
+                                    <input id="cc-number" name="deskripsi" type="tel" class="form-control" >
+                                </div>
+                                    <div class="col-6">
+                                        <label for="x_card_code" class="control-label mb-1">File Gambar</label>
+                                        <div class="input-group">
+                                            <input id="x_card_code" name="gambar" type="file" class="form-control" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input name="simpan" id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" value="Simpan">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
     <script src="<?= base_url('assets/vendors/jquery/dist/jquery.min.js');?>"></script>
     <script src="<?= base_url('assets/vendors/popper.js/dist/umd/popper.min.js');?>"></script>
     <script src="<?= base_url('assets/vendors/bootstrap/dist/js/bootstrap.min.js');?>"></script>
     <script src="<?= base_url('assets/main.js');?>"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){    
+            $("#contactForm").submit(function(event){
+                submitForm();
+                return false;
+            });
+        });
+        // function to handle form submit
+        function submitForm(){
+             $.ajax({
+                type: "POST",
+                url: "save_kontak.php",
+                cache:false,
+                data: $('form#contactForm').serialize(),
+                success: function(response){
+                    $("#contact").html(response)
+                    $("#contact-modal").modal('hide');
+                },
+                error: function(){
+                    alert("Error");
+                }
+            });
+        }
+    </script>
 </body>
 </html>

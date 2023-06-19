@@ -35,8 +35,7 @@
                     <li class="menu-item-has-children active dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Data</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Kamar/read')?>">Kamar </a></li>
-                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Fasilitas/read')?>">Fasilitas </a></li>
+                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Fasilitas/read')?>">Fasilitas</a></li>
                             <li><i class="fa fa-address-card"></i><a href="<?=site_url('Pengguna/read')?>">Pengguna</a></li>
                         </ul>
                     </li>
@@ -149,29 +148,22 @@
                                 <div id="pay-invoice">
                                     <div class="card-body">
                                         <div class="card-title">
-                                            <h3 class="text-center">Ubah Data Kamar <?= $detail->jenis ?></h3>
+                                            <h3 class="text-center">Ubah Data Kamar Fasilitas</h3>
                                         </div>
                                         <hr>
-                                        <form action="<?=site_url('Kamar/update/'.$detail->id)?>" method="post" novalidate="novalidate" enctype="multipart/form-data">
+                                        <form action="<?=site_url('Fasilitas/update/'.$detail->id_fasilitas)?>" method="post" novalidate="novalidate" enctype="multipart/form-data">
                                             <div class="form-group">
-                                                <img src="<?= base_url('images/kamar/'.$detail->gambar)?>" width="450px" height="280px">
+                                                <img src="<?= base_url('images/fasilitas/'.$detail->gambar)?>" width="450px" height="280px">
                                             </div>
-                                            <input type="hidden" name="id" value="<?=$detail->id?>">
+                                            <input type="hidden" name="id_fasilitas" value="<?=$detail->id_fasilitas?>">
                                                 <div class="form-group has-success">
-                                                    <label for="cc-name" class="control-label mb-1">Jenis Kamar</label>
-                                                    <input id="cc-name" value="<?= $detail->jenis ?>" name="jenis" type="text" class="form-control">
+                                                    <label for="cc-name" class="control-label mb-1">Nama Fasilitas</label>
+                                                    <input id="cc-name" value="<?= $detail->nama_fasilitas ?>" name="nama_fasilitas" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="cc-number" class="control-label mb-1">Harga</label>
-                                                    <input id="cc-number" name="harga" type="tel" class="form-control" value="<?= $detail->harga ?>">
+                                                    <label for="cc-number" class="control-label mb-1">Deskripsi</label>
+                                                    <input id="cc-number" name="deskripsi" type="tel" class="form-control" value="<?= $detail->deskripsi ?>">
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <div class="form-group">
-                                                            <label for="cc-exp" class="control-label mb-1">Jumlah</label>
-                                                            <input id="cc-exp" name="jumlah" type="tel" class="form-control " value="<?= $detail->jumlah ?>" >
-                                                        </div>
-                                                    </div>
                                                     <div class="col-6">
                                                         <label for="x_card_code" class="control-label mb-1">File Gambar</label>
                                                         <div class="input-group">

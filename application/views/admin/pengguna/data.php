@@ -35,6 +35,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Data</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-bed"></i><a href="<?=site_url('Kamar/read')?>">Kamar </a></li>
+                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Fasilitas/read')?>">Fasilitas </a></li>
                             <li><i class="fa fa-address-card"></i><a href="<?=site_url('Pengguna/read')?>">Pengguna</a></li>
                             <li><i class="fa fa-envelope"></i><a href="<?=site_url('utama/pesan')?>">Pesan</a></li>
                         </ul>

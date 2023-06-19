@@ -93,9 +93,50 @@
 							src="<?php echo base_url('foto/photos/banner.jpg'); ?>"
 							alt="...""/>
         </div>
-    </section>
-    <br>
-    <br>
+        
+            <div class="container">
+                
+        </div>
+    </div>
+
+    
+            <div class="container">
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title mb-75">
+                        <br>
+                          <br>
+                          <h2><span>Fasilitas Tersedia</span></h2>
+                            <p>Fasilitas yang kami sediakan sudah terintegarsi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-room-show">
+                    <div class="row">
+                        <div class="carousel-list">
+                            <?php foreach($fasilitas as $fs) {?>
+                            <div class="col-md-4">
+                                <div class="single-room">
+                                    <div class="room-img">
+                                        <a href="#"><img style="height : 250px;" src="<?=base_url()?>/images/fasilitas/<?=$fs->gambar?>" alt=""></a>
+                                    </div>
+                                    <div class="room-desc">
+                                        <div class="room-name">
+                                            <h3><a href="#"><?=$fs->nama_fasilitas?></a></h3>
+                                        </div>
+                                        <div class="room-rent">
+                                            <h6><?=$fs->deskripsi?><label></label></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           <?php } ?>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -135,7 +176,9 @@
         </div>
         <!--Our room end-->
 
+        
     </div>
+    
   <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- jquery latest version -->

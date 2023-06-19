@@ -9,6 +9,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('Kamar_model');
 		$this->load->model('Pengguna_model');
 		$this->load->model('Transaksi_model');
+		$this->load->model('Fasilitas_model');
 	} 
 	public function index()
 	{
@@ -17,6 +18,7 @@ class Welcome extends CI_Controller {
 			$this->load->view('admin/index');
 		}else{
 			$data['kamar']=$this->Kamar_model->read();
+			$data['fasilitas']=$this->Fasilitas_model->read();
 			$data['error'] = '';
 	        $data['result'] = $this->db->order_by('id','DESC')->get('kamar')->result();
 	        $data['trans']=$this->Transaksi_model->read();

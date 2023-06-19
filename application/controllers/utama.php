@@ -9,10 +9,12 @@ class utama extends CI_Controller {
 		$this->load->model('Kamar_model');
 		$this->load->model('Pengguna_model');
 		$this->load->model('Transaksi_model');
+		$this->load->model('Fasilitas_model');
 	} 
 	public function index()
 	{
 		$data['kamar']=$this->Kamar_model->read();
+		$data['fasilitas']=$this->Fasilitas_model->read();
 			$this->load->view('index', $data);
 	}
 	public function contact()
