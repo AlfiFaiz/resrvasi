@@ -8,7 +8,9 @@
 
 
     <link rel="stylesheet" href="<?= base_url('assets/vendors/bootstrap/dist/css/bootstrap.min.css');?>">
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
+    <link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

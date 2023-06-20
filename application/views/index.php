@@ -40,7 +40,7 @@
           position: relative
         }
         .footer{
-          background: url('<?php echo base_url('foto/photos/banner.jpg');?>')no-repeat scroll center center;
+          background: url('<?php echo base_url('foto/photos/u.jpg');?>')no-repeat scroll center center;
           background-size: cover;
           background-attachment: fixed;
         }
@@ -52,7 +52,7 @@
 <body>
 
 <div class="banner">    	   
-    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
+    <img src="<?php echo base_url('foto/photos/atap.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
     <div class="welcome-message">
         <div class="wrap-info">
         <div class="information">

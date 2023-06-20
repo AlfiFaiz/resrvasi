@@ -55,7 +55,7 @@
 <body>
 
 <div class="banner" >    	   
-    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
+<img src="<?php echo base_url('foto/photos/atap.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
     <div class="welcome-message">
         <div class="wrap-info">
         <div class="information">

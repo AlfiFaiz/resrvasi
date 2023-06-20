@@ -5,7 +5,8 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
+    <link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
 
     <link rel="stylesheet" href="<?= base_url('assets/vendors/bootstrap/dist/css/bootstrap.min.css');?>">
 

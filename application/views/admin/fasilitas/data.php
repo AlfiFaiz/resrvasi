@@ -8,7 +8,9 @@
 
 
     <link rel="stylesheet" href="<?= base_url('assets/vendors/bootstrap/dist/css/bootstrap.min.css');?>">
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
+    <link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>

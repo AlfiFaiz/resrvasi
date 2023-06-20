@@ -28,8 +28,8 @@
 
 
 <!-- favicon -->
-<link rel="shortcut icon" href="<?php echo base_url('images/favicon.png');?>" type="image/x-icon">
-<link rel="icon" href="<?php echo base_url('images/favicon.png');?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('bahan/stylee.css'); ?>">
 

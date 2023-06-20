@@ -5,7 +5,9 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
+    <link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+
 </head>
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Mukta');
@@ -13,7 +15,7 @@ body{
   font-family: 'Mukta', sans-serif;
     height:100vh;
     min-height:550px;
-    background-image: url(<?php echo base_url('foto/photos/banner.jpg');?>);
+    background-image: url(<?php echo base_url('foto/photos/atap.jpg');?>);
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;

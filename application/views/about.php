@@ -26,34 +26,11 @@
     <script src="<?= base_url('assets/js/vendor/modernizr-2.8.3.min.js');?>"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.1/js/bootstrap-dialog.min.js"></script>
-</head>
-    <style type="text/css">
-        .header-section{
-          background: url('<?php echo base_url('foto/photos/banner.jpg');?>')no-repeat scroll center center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-        .header-section.height-vh{
-          height: 100vh;
-        }
-        .header-section,.menu .search-bar,.b-date,.select-book{
-          position: relative
-        }
-        .footer{
-          background: url('<?php echo base_url('foto/photos/banner.jpg');?>')no-repeat scroll center center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-        .footer-bg-opacity {
-          background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
-
-        }
-    </style>
     <style>
-.card {
-    width: 250px;
+      .card {
+    width: 300px;
     height: 400px;
-    background: #dffef7;
+    background: #000;
     border-radius: 30px;
     overflow: hidden;
     position: relative;
@@ -88,7 +65,7 @@
     bottom: 0px;
     height: 150px;
     position: absolute;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,66,112,1)100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1)100%);
     z-index: 20;
     transition: all .25s ease;
 }
@@ -100,18 +77,17 @@
     padding: 20px;
     padding-bottom: 30px;
 }
-
 .card .con-text a {
-    font-size: 12px;
+    font-size: .8rem;
     opacity: 0;
-    margin-bottom: -180px;
+    margin-bottom: -170px;
     transition: all .25s ease;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
 }
-.card .con-text p button {
+.card .con-text a button {
     padding: 7px 17px;
     border-radius: 12px;
     background: transparent;
@@ -122,10 +98,10 @@
     cursor: pointer;
     transition: all .25s ease;
     font-family: poppins;
-    font-size: 12px;
+    font-size: .75rem;
     outline: none;
 }
-.card .con-text p button:hover {
+.card .con-text a button:hover {
     background: #fff;
     color: #000;
 }
@@ -133,14 +109,12 @@
   display: flex;
   justify-content: center;
 }
-
-
-
-</style>
+    </style>
+</head>
 <body>
 
 <div class="banner">    	   
-    <img src="<?php echo base_url('foto/photos/banner.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
+<img src="<?php echo base_url('foto/photos/atap.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
     <div class="welcome-message">
         <div class="wrap-info">
         <div class="information">
@@ -168,44 +142,44 @@
           <br>
 
           <p  style="text-align: justify;">
-          Based on the General Meeting of Shareholders (AGM) of ME HOTEL in deciding to spin off the Department of TOD (Transit Oriented Development) and Hotels to become a subsidiary, ME HOTEL. This is done so that business activities related to TOD and Hotels can be handled specifically and more focused by ME HOTEL as a subsidiary.
-
+            Based on the General Meeting of Shareholders (AGM) of ME HOTEL in deciding to spin off the Department of TOD (Transit Oriented Development) and Hotels to become a subsidiary, ME HOTEL. This is done so that business activities related to TOD and Hotels can be handled specifically and more focused by ME HOTEL as a subsidiary.
+            <br>
         Being part of ME HOTEL provides a greater opportunity to be able to expand, of course the feasibility study will still be conducted to assess the feasibility of implementing a business. The opportunity is wide open for ME HOTEL to develop its brand and become a hotel operator capable of providing complete services for partners, clients and investors.
           </p>
-
           <br>
           <br>
-          <br>
-
         </div>
         <h3 class="section-heading mb-4"  style="text-align: center;">
           <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
         </h3>
+        <center>
         <div class="center">
-          <a href="https://alfi.ilkomc1.com/" target="_blank" > 
-            <div class="card col-sm-5" style="margin:16px;">
-              <div class="con-text">
-                <img style="width: 200px" src="<?php echo base_url('images/AL.jpg'); ?>" alt="card-hover">
-                <h2>M Alfi Faiz</h2>
-                <p>	2207045
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a href="https://mhmmdysdn.ilkomc1.com/" target="_blank" > 
-              <div class="card col-sm-5" style="margin:16px;">
-                <div class="con-text">
-                  <img style="width: 200px" src="<?php echo base_url('image/danz.jpeg'); ?>" alt="card-hover" >
-                  <h2>M Yusdan</h2>
-                  <p>	2206847
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          </section>
-
-    <!-- jquery latest version -->
+        <a href="https://alfi.ilkomc1.com/" target="_blank" > 
+        <div class="card col-sm-10" style="padding:0%; margin:16px;">
+        <img style="width:600px" src="<?php echo base_url('images/alfii.jpg'); ?>" alt="card-hover">
+        <div class="con-text">
+        <h2 style="color:white">M Alfi Faiz</h2>
+        <p style="color:white">	2207045 </p>
+    </div>
+    </div>
+  </a>
+  <a href="https://mhmmdysdn.ilkomc1.com/" target="_blank" > 
+    <div class="card col-sm-10" style="padding:0%; margin:16px;">
+        <img style="width: 600px" src="<?php echo base_url('image/danz.jpeg'); ?>" alt="card-hover" >
+          <div class="con-text">
+          <h2 style="color:white">M Yusdan</h2>
+          <p style="color:white">	2206847 </p>
+    </div>
+  </div>
+</a>
+</div>
+  </center>
+        </section>
+        <br>
+          <br>
+          <br>
+          <br>
+              <!-- jquery latest version -->
     <script src="<?= base_url('assets/js/vendor/jquery-1.12.0.min.js');?>"></script>
     <!-- Bootstrap framework js -->
     <script src="<?= base_url('assets/js/bootstrap.min.js');?>"></script>
