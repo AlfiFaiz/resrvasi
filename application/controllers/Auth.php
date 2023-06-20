@@ -114,6 +114,7 @@ class Auth extends CI_Controller {
 		if (! $this->session->userdata('email')) redirect('Auth/login');
 		$data['trans'] = $this->Transaksi_model->read_by($id_pengguna);
 		$data['kamar'] = $this->Transaksi_model->getAllTrans();
+		$data['detail'] = $this->db->get_where('pengguna',['id_pengguna' => $id_pengguna])->row();
 		$this->load->view('user/konfirmasi', $data);
 	}
 	public function cetak($id_pengguna)

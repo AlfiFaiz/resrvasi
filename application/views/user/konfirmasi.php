@@ -43,29 +43,25 @@
         });
 
     </script>
-</head>  
 <style>
-.wrap{
-width: 800px;
-color:black;
-margin: 20px auto;
-padding:15px;
-}
+
 </style>
+</head>  
 <body>
     </head>
     
+    <div class="container">
     <div class="room-booking ptb-80">
-                <div class="container">
     <div class="wrapper">
     <div class="col-md-12">
     <table style="padding: 5%;" class="table">
     <tr><td rowspan="10" width="100px">
-    <img src="<?= base_url('images/pengguna/'.$this->session->userdata('gambar'))?>"style="display: block;border-radius: 5%;border-color:white;margin-right:30px; width:700px;" border="2px" ></td></tr>
-    <tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td> <?= $this->session->userdata('nama');?> </td></tr>
-    <tr><td><b>Username </b></td><td>:</td> <td><?= $this->session->userdata('email');?> </td></tr>
-    <tr><td><b>Jenis Kelamin </b></td><td>:</td> <td><?= $this->session->userdata('no');?> </td></tr>
-    <tr><td><b>Type</b></td><td>:</td> <td><?= $this->session->userdata('akses');?></td></tr></table>
+    <img src="<?= base_url('images/pengguna/'.$detail->gambar)?>"style="border-radius: 5%;border-color:white; margin-right:30px; width:600px;" border="2px" ></td></tr>
+    <tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td><?=$detail->nama?> </td></tr>
+    <tr><td><b>Username </b></td><td>:</td> <td><?= $detail->email?> </td></tr>
+    <tr><td><b>Jenis Kelamin </b></td><td>:</td> <td><?=$detail->no?> </td></tr>
+    <tr><td><b>Type</b></td><td>:</td> <td><?= $detail->akses?></td></tr></table>
+    <a class="btn btn-success" href="<?=site_url('utama/editdata/'.$detail->id_pengguna)?>">Edit</a>
     </div>
     </div>
                     <div class="row">

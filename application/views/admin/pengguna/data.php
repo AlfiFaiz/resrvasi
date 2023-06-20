@@ -173,17 +173,6 @@
                                                 <a class="btn btn-success" href="<?=site_url('Pengguna/edit/'.$user->id_pengguna)?>">Edit</a>
                                                 <a class="btn btn-danger" href="<?=site_url('Pengguna/hapus/'.$user->id_pengguna)?>" onclick="return confirm('Are U Sure?')">Delete</a>
                                             </td>
-                                            <!-- <td>
-                                                <?php 
-                                                    if($cat->sold_049==1){ 
-                                                        ?>
-                                                        <button class="btn btn-default">SOLD OUT</button>
-                                                 <?php
-                                                    }else{  ?>
-                                                    <a class="btn btn-warning" href="<?=site_url('cats049/sale/'.$cat->id_049)?>">Sale</a>
-                                                <?php } ?>
-                                            </td> -->
-                                        </tr>
                                     <?php } ?>
                                     </tbody>
                                 </table>
