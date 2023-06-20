@@ -70,12 +70,10 @@
                                             </div>
                                             <div class="single-room-details pl-50">
                                                 <h3 class="s_room_title"><?=$detail->jenis?></h3>
+                                                <h4 class="s_room_title">Tersedia <?=$detail->jumlah?> Kamar</h4>
                                                 <div class="room_price"><br>
                                                     <h4>Harga</h4><br>
                                                     <h5><?=$detail->harga?> <span>/ malam</span></h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +83,7 @@
                                                 <div class="date-to mb-15">
                                                     <label style="color: white;">NAMA</label>
                                                     <input type="text" placeholder="id pengguna" value="<?=$this->session->userdata('id_pengguna')?>" readonly="" name="id_pengguna" hidden>
-                                                    <input type="text" placeholder="Nama Lengkap" value="<?=$this->session->userdata('nama')?>" readonly="" name="nama" disabled>
+                                                    <input type="text" placeholder="Nama Lengkap" value="<?=$this->session->userdata('nama')?>" readonly="" name="nama" >
                                                 </div>
                                                 </div>
                                                 <div class="booking_form_inner">
@@ -110,18 +108,18 @@
                                                         </div>
                                                         <div class="date-to mb-15">
                                                         <label style="color: white;">JENIS KAMAR</label>
-                                                            <input type="text" readonly name="jenis" name="jenis" value="<?=$detail->jenis?>" disabled>
+                                                            <input type="text" readonly name="jenis" name="jenis" value="<?=$detail->jenis?>" >
                                                         </div>
                                                     </div>
 
                                                     <div class="single-form-part">
                                                     <div class="date-to mb-15">
                                                     <label style="color: white;">NO TELEPON</label>
-                                                            <input type="text" placeholder="No Telp." value="<?=$this->session->userdata('no')?>" readonly="" name="no" disabled>
+                                                            <input type="text" placeholder="No Telp." value="<?=$this->session->userdata('no')?>" readonly="" name="no" >
                                                         </div>
                                                         <div class="date-to mb-15">
                                                         <label style="color: white;">EMAIL</label>
-                                                            <input type="text" placeholder="Email" value="<?=$this->session->userdata('email')?>" readonly="" name="email" disabled>
+                                                            <input type="text" placeholder="Email" value="<?=$this->session->userdata('email')?>" readonly="" name="email" >
                                                         </div>
                                                     </div>
                                                 <div class="prve-next-box mt-20">

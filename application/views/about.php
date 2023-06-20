@@ -129,6 +129,10 @@
     background: #fff;
     color: #000;
 }
+.center {
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -173,35 +177,33 @@ Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for
           <br>
           <br>
 
-          <h3 class="section-heading mb-4"  style="text-align: center;">
-            <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
-          </h3>
-          <div class="container">
-                    <a href="https://alfi.ilkomc1.com/" target="_blank"> 
-                      <div class="card col-sm-5" style="margin:16px;">
-                        <img src="<?php echo base_url('images/AL.jpg'); ?>" alt="card-hover" style="width:500px;">
-                        <div class="con-text">
-                          <h2>M ALFI FAIZ</h2>
-                          <p>2207045
-                            </p>
-                          </div>
-                        </div>
-                        </a>
-                        <div class="container">
-                        <a href="https://ainun.ilkomc1.com/" target="_blank"> 
-                        
-                                    <div class="card col-sm-5" style="margin:16px;">
-                                    <img src="<?php echo base_url('assets/NU.jpg'); ?>" alt="card-hover" style="width:250px;">
-                                    <div class="con-text">
-                                        <h2>NURAINUN</h2>
-                                        <p>2202046
-                                        </p>
-                                    </div>
-                                </div>
-                                </a>
         </div>
-      </div>
-    </section>
+        <h3 class="section-heading mb-4"  style="text-align: center;">
+          <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
+        </h3>
+        <div class="center">
+          <a href="https://alfi.ilkomc1.com/" target="_blank" > 
+            <div class="card col-sm-5" style="margin:16px;">
+              <div class="con-text">
+                <img style="width: 200px" src="<?php echo base_url('images/AL.jpg'); ?>" alt="card-hover">
+                <h2>M Alfi Faiz</h2>
+                <p>	2207045
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="https://mhmmdysdn.ilkomc1.com/" target="_blank" > 
+              <div class="card col-sm-5" style="margin:16px;">
+                <div class="con-text">
+                  <img style="width: 200px" src="<?php echo base_url('image/danz.jpeg'); ?>" alt="card-hover" >
+                  <h2>M Yusdan</h2>
+                  <p>	2206847
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          </section>
 
     <!-- jquery latest version -->
     <script src="<?= base_url('assets/js/vendor/jquery-1.12.0.min.js');?>"></script>
