@@ -63,40 +63,36 @@
     </div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <section id="B" class="page-section about-heading">
       <div class="container">
-        <img
-          class="img-fluid rounded about-heading-img mb-3 mb-lg-0"
-          src="assets/img/2.jpg"
-          alt="..." />
-        <div class="about-heading-content">
-          <div class="row">
-            <div class="col-xl-9 col-lg-10 mx-auto">
-              <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper"
-                    >Strong Coffee, Strong Roots</span
-                  >
-                  <span class="section-heading-lower">About Our Cafe</span>
-                </h2>
-                <p>
-                  Founded in 1987 by the Hernandez brothers, our establishment
-                  has been serving up rich coffee sourced from artisan farmers
-                  in various regions of South and Central America. We are
-                  dedicated to travelling the world, finding the best coffee,
-                  and bringing back to you here in our cafe.
-                </p>
-                <p class="mb-0">
-                  We guarantee that you will fall in
-                  <em>lust</em>
-                  with our decadent blends the moment you walk inside until you
-                  finish your last sip. Join us for your daily routine, an
-                  outing with friends, or simply just to enjoy some alone time.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="about-heading-content">
+          <h2 class="section-heading mb-4"  style="text-align: center;">
+            <span" class="section-heading-upper">BECOME PART OF PT. ADHI COMMUTER PROPERTY</span> 
+          </h2>
+          <br>
+          <br>
+          <br>
+
+          <p  style="text-align: justify;">
+          Based on the General Meeting of Shareholders (AGM) of PT Adhi Karya Tbk (ADHI) in deciding to spin off the Department of TOD (Transit Oriented Development) and Hotels to become a subsidiary, PT Adhi Commuter Properti (ACP). This is done so that business activities related to TOD and Hotels can be handled specifically and more focused by PT Adhi Commuter Properti (ACP) as a subsidiary.
+
+Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for Hotel GranDhika to be able to expand, of course the feasibility study will still be conducted to assess the feasibility of implementing a business. The opportunity is wide open for Hotel GranDhika to develop its brand and become a hotel operator capable of providing complete services for partners, clients and investors.
+          </p>
+
+          <br>
+          <br>
+          <br>
+
+          <h3 class="section-heading mb-4"  style="text-align: center;">
+            <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
+          </h3>
+          
         </div>
       </div>
     </section>

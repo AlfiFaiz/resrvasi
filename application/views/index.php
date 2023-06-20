@@ -155,7 +155,7 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
+                                        <a href="#"><img style="height : 250px;" src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
