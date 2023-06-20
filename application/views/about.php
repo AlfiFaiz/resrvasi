@@ -177,17 +177,6 @@ Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for
             <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
           </h3>
           <div class="container">
-            <a href="https://furqon.ilkomc1.com/" target="_blank"> 
-                        <div class="card col-sm-5" style="margin:16px;">
-                        <img src="<?php echo base_url('assets/FU.jpg'); ?>" alt="card-hover" style="width:400px;">
-                        <div class="con-text">
-                            <h2>M FURQON</h2>
-                            <p>	2207207
-                            </p>
-                        </div>
-                    </div>
-            </a>
-                    <div class="container">
                     <a href="https://alfi.ilkomc1.com/" target="_blank"> 
                       <div class="card col-sm-5" style="margin:16px;">
                         <img src="<?php echo base_url('assets/AL.jpg'); ?>" alt="card-hover" style="width:590px;">
@@ -200,7 +189,16 @@ Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for
                         </a>
                         <div class="container">
                         <a href="https://ainun.ilkomc1.com/" target="_blank"> 
-                
+                        
+                                    <div class="card col-sm-5" style="margin:16px;">
+                                    <img src="<?php echo base_url('assets/NU.jpg'); ?>" alt="card-hover" style="width:250px;">
+                                    <div class="con-text">
+                                        <h2>NURAINUN</h2>
+                                        <p>2202046
+                                        </p>
+                                    </div>
+                                </div>
+                                </a>
         </div>
       </div>
     </section>
