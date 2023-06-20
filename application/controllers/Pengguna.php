@@ -9,7 +9,7 @@ class Pengguna extends CI_Controller {
 		$this->load->model('Pengguna_model');
 		if (! $this->session->userdata('email')) redirect('Auth/login');
 		if ($this->session->userdata('akses')=='Admin') {
-			// redirect('Welcome');
+			
 		}else{
 			redirect('Welcome');
 		}
