@@ -47,14 +47,11 @@
 <body>
 <table style="padding: 5%;" class="table">
 <tr><td rowspan="10" width="100px">
-<img style="display: block;border-radius: 5%;border-color:white;margin-right:30px; width:300px;" border="2px" ></td></tr>
-<tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td> </td></tr>
-<tr><td><b>Username </b></td><td>:</td> <td> </td></tr>
-<tr><td><b>Jenis Kelamin </b></td><td>:</td> <td> </td></tr>
-<tr><td><b>TTL </b></td><td>:</td> <td> </td></tr>
-<tr><td><b>Bio </b></td><td>:</td> <td> </td></tr>
-<tr><td><b>Institusi </b></td><td>:</td> <td> </td></tr>
-<tr><td><b>Type</b></td><td>:</td> <td></td></tr></table>
+<img src="<?= base_url('images/pengguna/'.$this->session->userdata('gambar'))?>"style="display: block;border-radius: 5%;border-color:white;margin-right:30px; width:700px;" border="2px" ></td></tr>
+<tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td> <?= $this->session->userdata('nama');?> </td></tr>
+<tr><td><b>Username </b></td><td>:</td> <td><?= $this->session->userdata('email');?> </td></tr>
+<tr><td><b>Jenis Kelamin </b></td><td>:</td> <td><?= $this->session->userdata('no');?> </td></tr>
+<tr><td><b>Type</b></td><td>:</td> <td><?= $this->session->userdata('akses');?></td></tr></table>
     <div class="wrapper">
           <div class="room-booking ptb-80">
             <div class="container">

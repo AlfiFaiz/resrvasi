@@ -184,20 +184,20 @@ Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for
         <div class="center">
           <a href="https://alfi.ilkomc1.com/" target="_blank" > 
             <div class="card col-sm-5" style="margin:16px;">
-              <img src="<?php echo base_url('assets/FU.jpg'); ?>" alt="card-hover" style="width:400px;">
               <div class="con-text">
+                <img style="width: 200px" src="<?php echo base_url('images/AL.jpg'); ?>" alt="card-hover">
                 <h2>M Alfi Faiz</h2>
                 <p>	2207045
                   </p>
                 </div>
               </div>
             </a>
-          <a href="https://mhmmdysdn.ilkomc1.com/" target="_blank" > 
-            <div class="card col-sm-5" style="margin:16px;">
-              <img src="<?php echo base_url('image/danz.jpeg'); ?>" alt="card-hover" style="width:400px;">
-              <div class="con-text">
-                <h2>M Yusdan</h2>
-                <p>	2206847
+            <a href="https://mhmmdysdn.ilkomc1.com/" target="_blank" > 
+              <div class="card col-sm-5" style="margin:16px;">
+                <div class="con-text">
+                  <img style="width: 200px" src="<?php echo base_url('image/danz.jpeg'); ?>" alt="card-hover" >
+                  <h2>M Yusdan</h2>
+                  <p>	2206847
                   </p>
                 </div>
               </div>
