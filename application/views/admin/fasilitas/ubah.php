@@ -14,7 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <aside id="left-panel" class="left-panel">
+<aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
 
             <div class="navbar-header">
@@ -31,26 +31,26 @@
                     <li>
                         <a href="<?=site_url('Welcome/index')?>"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">Master</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children active dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Data</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Fasilitas/read')?>">Fasilitas</a></li>
+                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Kamar/read')?>">Kamar </a></li>
+                            <li><i class="fa fa-bed"></i><a href="<?=site_url('Fasilitas/read')?>">Fasilitas </a></li>
                             <li><i class="fa fa-address-card"></i><a href="<?=site_url('Pengguna/read')?>">Pengguna</a></li>
+                            <li><i class="fa fa-envelope"></i><a href="<?=site_url('utama/pesan')?>">Pesan</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Transaksi</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-money"></i>Transaksi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-envelope"></i><a href="<?=site_url('Transaksi/read')?>">Pending</a></li>
-                            <li><i class="fa fa-envelope-open"></i><a href="<?=site_url('Transaksi/data')?>">Confirm</a></li>
+                            <li><i class="fa fa-hourglass-start"></i><a href="<?=site_url('Transaksi/read')?>">Pending</a></li>
+                            <li><i class="fa fa-check"></i><a href="<?=site_url('Transaksi/data')?>">Confirm</a></li>
                             <li><i class="fa fa-plus"></i><a href="<?=site_url('Transaksi/add')?>">Baru</a></li>
                         </ul>
                     </li>
                 </ul>
             </ul>
             </div><!-- /.navbar-collapse -->
-        </nav>
     </aside><!-- /#left-panel -->
 
     <!-- Left Panel -->
@@ -79,12 +79,12 @@
 
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" style="height: 40px; width: 35px;" src="<?= base_url()?>/images/pengguna/<?=$this->session->userdata('gambar')?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" style="height: 40px; width: 35px;" src="<?= base_url('/images/pengguna/')?><?=$this->session->userdata('gambar')?>">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                             <a class="nav-link" href="<?= site_url('Auth/logout')?>"><i class="fa fa-power-off"></i> Logout</a>
+                            <a class="nav-link" href="<?= site_url('Auth/logout')?>"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
 
