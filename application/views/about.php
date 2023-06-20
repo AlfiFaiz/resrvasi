@@ -161,16 +161,16 @@
       <div class="container">
           <div class="about-heading-content">
           <h2 class="section-heading mb-4"  style="text-align: center;">
-            <span" class="section-heading-upper">BECOME PART OF PT. ADHI COMMUTER PROPERTY</span> 
+            <span" class="section-heading-upper">BECOME PART OF ME HOTEL</span> 
           </h2>
           <br>
           <br>
           <br>
 
           <p  style="text-align: justify;">
-          Based on the General Meeting of Shareholders (AGM) of PT Adhi Karya Tbk (ADHI) in deciding to spin off the Department of TOD (Transit Oriented Development) and Hotels to become a subsidiary, PT Adhi Commuter Properti (ACP). This is done so that business activities related to TOD and Hotels can be handled specifically and more focused by PT Adhi Commuter Properti (ACP) as a subsidiary.
+          Based on the General Meeting of Shareholders (AGM) of ME HOTEL in deciding to spin off the Department of TOD (Transit Oriented Development) and Hotels to become a subsidiary, ME HOTEL. This is done so that business activities related to TOD and Hotels can be handled specifically and more focused by ME HOTEL as a subsidiary.
 
-Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for Hotel GranDhika to be able to expand, of course the feasibility study will still be conducted to assess the feasibility of implementing a business. The opportunity is wide open for Hotel GranDhika to develop its brand and become a hotel operator capable of providing complete services for partners, clients and investors.
+        Being part of ME HOTEL provides a greater opportunity to be able to expand, of course the feasibility study will still be conducted to assess the feasibility of implementing a business. The opportunity is wide open for ME HOTEL to develop its brand and become a hotel operator capable of providing complete services for partners, clients and investors.
           </p>
 
           <br>
