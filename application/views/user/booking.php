@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/shortcode/shortcodes.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/stylee.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css');?>">
-    <link rel="icon" href="<?=base_url('/images/')?>">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />

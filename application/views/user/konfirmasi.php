@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/shortcode/shortcodes.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/stylee.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css');?>">
-    <link rel="icon" href="<?=base_url()?>/images/logo.png">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
@@ -46,6 +45,16 @@
     </script>
 </head>  
 <body>
+<table style="padding: 5%;" class="table">
+<tr><td rowspan="10" width="100px">
+<img style="display: block;border-radius: 5%;border-color:white;margin-right:30px; width:300px;" border="2px" ></td></tr>
+<tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td> </td></tr>
+<tr><td><b>Username </b></td><td>:</td> <td> </td></tr>
+<tr><td><b>Jenis Kelamin </b></td><td>:</td> <td> </td></tr>
+<tr><td><b>TTL </b></td><td>:</td> <td> </td></tr>
+<tr><td><b>Bio </b></td><td>:</td> <td> </td></tr>
+<tr><td><b>Institusi </b></td><td>:</td> <td> </td></tr>
+<tr><td><b>Type</b></td><td>:</td> <td></td></tr></table>
     <div class="wrapper">
           <div class="room-booking ptb-80">
             <div class="container">
@@ -115,8 +124,8 @@
             </td>
         </table>
         <?php 
-                                                        $tampil = $this->db->get_where('kamar',array('jenis' => $t->jenis))->row(); 
-                                                    ?>
+        $tampil = $this->db->get_where('kamar',array('jenis' => $t->jenis))->row(); 
+        ?>
         <br>
         <table cellspacing='0' style='width:900px; font-size:18px; font-family:calibri;  border-collapse: collapse;border:#9BA4B5;'>
             <tr align='center'>
@@ -128,7 +137,7 @@
                 <td width='15%' style='text-align:right;border:#9BA4B5;'>Total Harga</td>
             </tr>
             <tr align='center'>
-                <td><?=$t->tgl_in?></td>
+                <td><?=$t->tgl_in?></td> 
                 <td><?=$t->tgl_out?></td>
                 <td><?=$t->jenis?></td>
                 <td><?=$t->jumlah?></td>

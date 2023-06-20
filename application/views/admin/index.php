@@ -170,7 +170,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                                 <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="<?=site_url('Pengguna/read')?>">Kelola</a>
+                                    <a class="dropdown-item" href="<?=site_url('Fasilitas/read')?>">Kelola</a>
                                 </div>
                             </div>
                         </div>
@@ -224,14 +224,14 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                                 <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="<?=site_url('Kamar/read')?>">Kelola</a>
+                                    <a class="dropdown-item" href="<?=site_url('utama/pesan')?>">Kelola</a>
                                 </div>
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count"><?=$this->db->count_all('kamar');?></span>
+                            <span class="count"><?=$this->db->count_all('pesan');?></span>
                         </h4>
-                        <p class="text-light">Kamar</p>
+                        <p class="text-light">Pesan</p>
 
                         <div class="chart-wrapper px-0" style="height:70px;" height="70">
                             <canvas id="widgetChart2"></canvas>

@@ -63,6 +63,18 @@ class Auth extends CI_Controller {
 			$this->load->view('login');
 		}
 	}
+	public function pesan()
+	{
+	    if ($this->input->post('pesan')) {
+			$this->Auth_model->pesan();
+			if($this->db->affected_rows() > 0){
+        		$this->session->set_flashdata('pesan', '<p style="color:green">Berhasil mengirim pesan</p>');
+        	}else{
+        		$this->session->set_flashdata('pesan', '<p style="color:red;">Gagal mengirim pesan!</p>');
+        	}
+			$this->load->view('contact');
+		}
+	}
 
 	public function booking($id)
 	{

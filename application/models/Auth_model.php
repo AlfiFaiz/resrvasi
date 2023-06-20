@@ -10,6 +10,15 @@
 		return $this->db->get('pengguna')->row();
 	}
 
+	public function pesan()
+	{
+		$data = array (
+			'nama' => $this->input->post('nama'),
+			'Email' => $this->input->post('email'),
+			'pesan' => $this->input->post('pesan'),
+		);
+		$this->db->insert('pesan', $data);
+	}
 	public function register()
 	{
 		$data = array (
