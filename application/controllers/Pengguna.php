@@ -70,13 +70,13 @@ class Pengguna extends CI_Controller {
 	    if($query){
 	        unlink("images/pengguna/".$_id->gambar);
 	    }
-	    redirect('Pengguna/read');
+	    redirect('pengguna/read');
 	}
 
 	public function update()
 	{
 	    $id = $this->input->post('id');
-        $_image = $this->db->get_where('pengguna',['id' => $id])->row();
+        $_image = $this->db->get_where('pengguna',['id_pengguna' => $id])->row();
         $config['upload_path']          = './images/pengguna/';
         $config['allowed_types']        = 'jpg|png';
         $config['max_size']             = 0;
@@ -101,7 +101,7 @@ class Pengguna extends CI_Controller {
 	            'akses'=> $this->input->post('akses'),
                 'gambar' => $_data['upload_data']['file_name']
                 );
-            $query = $this->db->update('pengguna', $data, array('id' => $id));
+            $query = $this->db->update('pengguna', $data, array('id_pengguna' => $id));
             if($query){
                 unlink("images/pengguna/".$_image->gambar);
             }

@@ -167,7 +167,7 @@
                                             <td><img src="<?=base_url('images/fasilitas/')?><?=$key->gambar?>" style="height: 100px; width: 100px;"></td>
                                             <td>
                                                 <a href="<?=site_url('Fasilitas/edit/')?><?=$key->id_fasilitas?>" class="btn btn-warning">Edit</a>
-                                                <a href="<?=site_url('Fasilitas/delete/')?><?=$key->id_fasilitas?>" class="btn btn-danger">Delete</a>
+                                                <a href="<?=site_url('Fasilitas/delete/')?><?=$key->id_fasilitas?>" class="btn btn-danger" onclick="return confirm('Are U Sure?')">Delete</a>
                                             </td>
                                         </tr>
                                         <?php } ?>

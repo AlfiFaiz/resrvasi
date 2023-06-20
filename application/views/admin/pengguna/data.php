@@ -171,7 +171,7 @@
                                             <td><?=$user->akses ?></td>
                                             <td>
                                                 <a class="btn btn-success" href="<?=site_url('Pengguna/edit/'.$user->id_pengguna)?>">Edit</a>
-                                                <a class="btn btn-danger" href="<?=site_url('Pengguna/hapus/'.$user->id_pengguna)?>" onclick="return confirm('Are U Sure?')">Delete</a>
+                                                <a class="btn btn-danger" href="<?=site_url('Pengguna/delete/'.$user->id_pengguna)?>" onclick="return confirm('Are U Sure?')">Delete</a>
                                             </td>
                                             <!-- <td>
                                                 <?php 
