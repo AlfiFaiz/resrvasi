@@ -129,6 +129,10 @@
     background: #fff;
     color: #000;
 }
+.center {
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -173,23 +177,33 @@ Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for
           <br>
           <br>
 
-          <h3 class="section-heading mb-4"  style="text-align: center;">
-            <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
-            <div>
-              <a href="https://furqon.ilkomc1.com/" target="_blank"> 
-                        <div class="card col-sm-5" style="margin:16px;">
-                          <img src="<?php echo base_url('assets/FU.jpg'); ?>" alt="card-hover" style="width:400px;">
-                        <div class="con-text">
-                            <h2>M FURQON</h2>
-                            <p>	2207207
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </h3>
         </div>
-      </div>
-    </section>
+        <h3 class="section-heading mb-4"  style="text-align: center;">
+          <span" class="section-heading-upper">WEB HOTEL DEVELOPER</span> 
+        </h3>
+        <div class="center">
+          <a href="https://alfi.ilkomc1.com/" target="_blank" > 
+            <div class="card col-sm-5" style="margin:16px;">
+              <img src="<?php echo base_url('assets/FU.jpg'); ?>" alt="card-hover" style="width:400px;">
+              <div class="con-text">
+                <h2>M Alfi Faiz</h2>
+                <p>	2207045
+                  </p>
+                </div>
+              </div>
+            </a>
+          <a href="https://mhmmdysdn.ilkomc1.com/" target="_blank" > 
+            <div class="card col-sm-5" style="margin:16px;">
+              <img src="<?php echo base_url('image/danz.jpeg'); ?>" alt="card-hover" style="width:400px;">
+              <div class="con-text">
+                <h2>M Yusdan</h2>
+                <p>	2206847
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          </section>
 
     <!-- jquery latest version -->
     <script src="<?= base_url('assets/js/vendor/jquery-1.12.0.min.js');?>"></script>

@@ -209,11 +209,14 @@
                             <div class="col-md-4">
                                 <div class="single-room">
                                     <div class="room-img">
-                                        <a href="#"><img src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
+                                        <a href="#"><img style="height : 250px;" src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
                                     </div>
                                     <div class="room-desc">
                                         <div class="room-name">
                                             <h3><a href="#"><?=$kmr->jenis?></a></h3>
+                                        </div>
+                                        <div class="room-rent">
+                                            <h6>jumlah <?=$kmr->jumlah?> kamar</h6>
                                         </div>
                                         <div class="room-rent">
                                             <h6>Rp <?=$kmr->harga?> / <label>Malam</label></h6>
