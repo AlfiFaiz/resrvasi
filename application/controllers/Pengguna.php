@@ -68,7 +68,7 @@ class Pengguna extends CI_Controller {
 	    if($query){
 	        unlink("images/pengguna/".$_id->gambar);
 	    }
-	    redirect('Pengguna/read');
+	    redirect('pengguna/read');
 	}
 
 	public function update()
