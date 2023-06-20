@@ -179,7 +179,7 @@ Being part of PT Adhi Commuter Properti (ACP) provides a greater opportunity for
           <div class="container">
                     <a href="https://alfi.ilkomc1.com/" target="_blank"> 
                       <div class="card col-sm-5" style="margin:16px;">
-                        <img src="<?php echo base_url('assets/AL.jpg'); ?>" alt="card-hover" style="width:590px;">
+                        <img src="<?php echo base_url('images/AL.jpg'); ?>" alt="card-hover" style="width:500px;">
                         <div class="con-text">
                           <h2>M ALFI FAIZ</h2>
                           <p>2207045
