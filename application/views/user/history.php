@@ -62,15 +62,15 @@
                                 <h2>Konfirmasi <span>Pemesanan</span></h2>
                                     <div class="service-tab-desc text-left mt-60">
                                         <div class="tab-content">
-                                            <div class="text-center"><a href="<?= site_url('Welcome/index')?>" class="btn btn-primary">Kembali ke Beranda</a></div><br><br>
+                                            <div class="text-center"><a href="<?= site_url('Auth/konfirmasi/'.$detail->id_pengguna)?>" class="btn btn-primary">Kembali ke Pesanan</a></div><br><br>
                                                     <div class="booking-done-table table-responsive text-center" style="width: 100%;">                                       
                                                         <?php 
                                                         $nomor = 1;
                                                         foreach ($trans as $t) {
-                                                            if ($t->status === 'Pending') {
+                                                            if ($t->status === 'Confirm') {
                                                         ?>
                                                         
-                                                        <h2 class="text-center"><b>PESANAN</b> <?php echo $nomor ?></h2>
+                                                        <h2 class="text-center"><b>PESANAN</b> </h2>
                                                 <body style='font-family:tahoma; font-size:18px;' >
                                                 <center>
                                                     <div style='background-color:#9BA4B5; border-radius:5px; padding:20px;'>
@@ -161,11 +161,10 @@
                                                 <?php 
                                                     $nomor++;
                                                 }
-                                            }
-                                            ?>
+                                                    }
+                                                    ?>
                                                 </body>
-                                            </div>        
-                                            <a class="btn btn-warning" href="<?=site_url('Auth/history/'.$detail->id_pengguna)?>">history</a> 
+                                        </div>        
                                         </div>
                                     </div>
                                 </div>

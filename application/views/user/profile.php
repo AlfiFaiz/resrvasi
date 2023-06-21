@@ -111,8 +111,8 @@ padding:15px;
     <tr><td rowspan="10" width="100px">
     <img src="<?= base_url('images/pengguna/'.$detail->gambar)?>"style="border-radius: 5%;border-color:white; margin-right:30px; width:600px;" border="2px" ></td></tr>
     <tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td><?=$detail->nama?> </td></tr>
-    <tr><td><b>Username </b></td><td>:</td> <td><?= $detail->email?> </td></tr>
-    <tr><td><b>Jenis Kelamin </b></td><td>:</td> <td><?=$detail->no?> </td></tr>
+    <tr><td><b>Email </b></td><td>:</td> <td><?= $detail->email?> </td></tr>
+    <tr><td><b>No Telp </b></td><td>:</td> <td><?=$detail->no?> </td></tr>
     <tr><td><b>Type</b></td><td>:</td> <td><?= $detail->akses?></td></tr></table>
     <a class="btn btn-success" href="<?=site_url('utama/editdata/'.$detail->id_pengguna)?>">Edit</a>
     <br>
