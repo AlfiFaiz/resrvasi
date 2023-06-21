@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/shortcode/shortcodes.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/stylee.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css');?>">
+    <link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
@@ -149,12 +152,15 @@
                                                 <table cellspacing='0' style='width:900px; font-size:18px; font-family:calibri;  border-collapse: collapse;border:#9BA4B5;'>
                                                         <tr align='center'>
                                                             <td width='15%' style='text-align:right;border:#9BA4B5;'>
-                                                            <a style="cursor:pointer; color:white; font-weight:bold; text-decoration: underline;" onclick="window.open('<?= site_url('Auth/cetak/').$t->id_transaksi?>','','width=1100px,height=500,toolbar=no,location=no,directories=no,status=no,menubar=no, scrollbars=no,resizable=yes,copyhistory=no')">Print Bukti</a> 
-                                                        </td>
-                                                        </tr>
-                                                    </table>
-                                                    <?php
+                                                            <a class="btn btn-warning" style="cursor:pointer; color:white; font-weight:bold; text-decoration: underline;" onclick="window.open('<?= site_url('Auth/cetak/').$t->id_transaksi?>','','width=1100px,height=500,toolbar=no,location=no,directories=no,status=no,menubar=no, scrollbars=no,resizable=yes,copyhistory=no')">Print Bukti</a> 
+                                                            <?php
+                                                }else{?>
+                                                <a class="btn btn-danger" href="<?=site_url('utama/delete/'.$t->id_transaksi)?>" onclick="return confirm('Are U Sure?')">Batalkan pesanan</a>
+                                                </td>
+                                                <?php
                                                 }?>
+                                                </tr>
+                                            </table>
                                                     </div>
                                                 </center>
                                                 <br>

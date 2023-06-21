@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/core.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/shortcode/shortcodes.css');?>">
+    <link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url('assets/stylee.css');?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css');?>">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

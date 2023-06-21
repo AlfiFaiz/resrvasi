@@ -72,4 +72,9 @@ class utama extends CI_Controller {
 	        
 	    
 	}
+	public function delete($id){
+	    $_id = $this->db->get_where('transaksi',['id_transaksi' => $id])->row();
+	    $query = $this->db->delete('transaksi',['id_transaksi'=>$id]);
+	    redirect('Auth/konfirmasi/'.$this->session->userdata('id_pengguna'));
+	}
 }

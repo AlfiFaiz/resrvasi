@@ -27,9 +27,9 @@
 <link rel="stylesheet" href="<?php echo base_url('bahan/gallery/blueimp-gallery.min.css');?>">
 
 
-<!-- favicon -->
-<link rel="shortcut icon" href="<?php echo base_url('images/favicon.png');?>" type="image/x-icon">
-<link rel="icon" href="<?php echo base_url('images/favicon.png');?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('foto/photos/logo.png');?>" type="image/x-icon">
+
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('bahan/stylee.css'); ?>">
 
@@ -216,19 +216,21 @@
                                             <h3><a href="#"><?=$kmr->jenis?></a></h3>
                                         </div>
                                         <div class="room-rent">
-                                            <h6>jumlah <?=$kmr->jumlah?> kamar</h6>
+                                            <h6><?=$kmr->jumlah?> kamar tersedia </h6>
                                         </div>
                                         <div class="room-rent">
                                             <h6>Rp <?=$kmr->harga?> / <label>Malam</label></h6>
                                         </div>
                                         <div class="room-book">
+                                        <?php if ($kmr->jumlah > 0) {
+                                            # code...?>
                                             <a href="<?=site_url('Auth/booking/'.$kmr->id)?>">Pesan</a>
                                         </div>
+                                        <?php }else{} ?>
                                     </div>
                                 </div>
                             </div>
-                           <?php } ?>
-                            
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
