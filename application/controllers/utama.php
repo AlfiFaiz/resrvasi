@@ -68,7 +68,7 @@ class utama extends CI_Controller {
             if($query){
                 unlink("images/pengguna/".$_image->gambar);
             }
-        } redirect('Auth/konfirmasi/'.$id);
+        } redirect('Auth/profile/'.$id);
 	        
 	    
 	}
