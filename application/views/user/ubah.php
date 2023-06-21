@@ -38,7 +38,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li><a href="<?= site_url('Auth/konfirmasi/').$this->session->userdata('id_pengguna')?>">Kembali</a></li>
+                            <li><a href="<?= site_url('Auth/profile/').$this->session->userdata('id_pengguna')?>">Kembali</a></li>
                         </ol>
                     </div>
                 </div>
