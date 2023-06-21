@@ -74,8 +74,16 @@
                                                 <h3 class="s_room_title"><?=$detail->jenis?></h3>
                                                 <h4 class="s_room_title">Tersedia <?=$detail->jumlah?> Kamar</h4>
                                                 <div class="room_price"><br>
-                                                    <h4>Harga</h4><br>
+                                                    <h4>Harga</h4>
                                                     <h5><?=$detail->harga?> <span>/ malam</span></h5>
+                                                    <br>
+                                                    <br>
+                                                    <h3 class="s_room_title">Fasilitas</h3>
+                                                    <?php foreach ($fasilitas as $f) {
+                                                        ?>
+                                                    <h5><?=$f->nama_fasilitas?></h5>
+                                                        <?php
+                                                    } ?>
                                                 </div>
                                             </div>
                                         </div>

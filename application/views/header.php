@@ -59,6 +59,7 @@
         <li><a href="<?php echo site_url('utama/about');?>">About Me</a></li>
         <li><a href="<?php echo site_url('utama/contact');?>">Contact us</a></li>           
         <li><a href="<?= site_url('Auth/konfirmasi/').$this->session->userdata('id_pengguna')?>">pesanan</a></li>
+        <li><a href="<?= site_url('Auth/profile/').$this->session->userdata('id_pengguna')?>">Info akun</a></li>
         <li><a href="<?= site_url('Auth/logout')?>">Logout</a></li>   
       </ul>
       <?php } else { ?>

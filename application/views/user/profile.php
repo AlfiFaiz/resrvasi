@@ -93,159 +93,39 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.1/js/bootstrap-dialog.min.js"></script>
 </head>
-<style type="text/css">
-        .header-section{
-          background: url('<?php echo base_url('foto/photos/banner.jpg');?>')no-repeat scroll center center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-        .header-section.height-vh{
-          height: 100vh;
-        }
-        .header-section,.menu .search-bar,.b-date,.select-book{
-          position: relative
-        }
-        .footer{
-          background: url('<?php echo base_url('foto/photos/banner.jpg');?>')no-repeat scroll center center;
-          background-size: cover;
-          background-attachment: fixed;
-        }
-        .footer-bg-opacity {
-          background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
-
-        }
-    </style>
+<style>
+.wrap{
+width: 800px;
+color:black;
+margin: 20px auto;
+padding:15px;
+}
+</style>
 <body>
 
-<div class="banner">    	   
-<img src="<?php echo base_url('foto/photos/atap.jpg');?>" class="img-responsive" alt="slide" style="height:400px">
-    <div class="welcome-message">
-        <div class="wrap-info">
-            <div class="information">
-            <marquee><h1  class="animated fadeInDown" style="color:white;">Best hotel in Gerlong</h1></marquee>
-                <p class="animated fadeInUp" style="color:white;">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
-            </div>
-        </div>
-    </div>
-</div>
+<div class="container">
+    <div class="room-booking ptb-80">
     <div class="wrapper">
-    <div class="our-room text-center ptb-80 white-bg">
-        <section style="margin: 3%;">
-      <div class="col-sm-6">
-              <h2 class="section-heading mb-4">
-                <span >HALLO </span>
-                <span ><?= $this->session->userdata('nama');?></span>
-              </h2>
-              <br>
-              <p style="text-align: justify;"> Kami menyediakan : <br> tempat yang baik, <br> lokasi yang strategis,<br> ruangan yang nyaman dan pelayanan prima <br>Sehingga pelanggan tidak merasa kapok setelah datang kesini</p>
-            </div>
-			<br>
-      <div class="col-sm-6">				
-          <img
-							class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-							src="<?php echo base_url('foto/photos/banner.jpg'); ?>"
-							alt="...""/>
-        </div>
-    </section>
+    <div class="col-md-12">
+    <table style="padding: 5%;" class="table">
+    <tr><td rowspan="10" width="100px">
+    <img src="<?= base_url('images/pengguna/'.$detail->gambar)?>"style="border-radius: 5%;border-color:white; margin-right:30px; width:600px;" border="2px" ></td></tr>
+    <tr style="padding: 2px;"><td><b>Nama </b></td><td>:</td> <td><?=$detail->nama?> </td></tr>
+    <tr><td><b>Username </b></td><td>:</td> <td><?= $detail->email?> </td></tr>
+    <tr><td><b>Jenis Kelamin </b></td><td>:</td> <td><?=$detail->no?> </td></tr>
+    <tr><td><b>Type</b></td><td>:</td> <td><?= $detail->akses?></td></tr></table>
+    <a class="btn btn-success" href="<?=site_url('utama/editdata/'.$detail->id_pengguna)?>">Edit</a>
     <br>
     <br>
-    <div class="container">
-                
-        </div>
+    <br>
+    <br>
+    <br>
+    </div>
+    </div>
     </div>
 
-    
-            <div class="container">
-            <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title mb-75">
-                        <br>
-                          <br>
-                          <h2><span>Fasilitas Tersedia</span></h2>
-                            <p>Fasilitas yang kami sediakan sudah terintegarsi.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="our-room-show">
-                    <div class="row">
-                        <div class="carousel-list">
-                            <?php foreach($fasilitas as $fs) {?>
-                            <div class="col-md-4">
-                                <div class="single-room">
-                                    <div class="room-img">
-                                        <a href="#"><img style="height : 250px;" src="<?=base_url()?>/images/fasilitas/<?=$fs->gambar?>" alt=""></a>
-                                    </div>
-                                    <div class="room-desc">
-                                        <div class="room-name">
-                                            <h3><a href="#"><?=$fs->nama_fasilitas?></a></h3>
-                                        </div>
-                                        <div class="room-rent">
-                                            <h6><?=$fs->deskripsi?><label></label></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           <?php } ?>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-                            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title mb-75">
-                        <br>
-                          <br>
-                          <h2>Jenis <span>Kamar</span></h2>
-                            <p>Kami menyediakan berbagai jenis kamar, baik untuk sendiri, pasangan, maupun keluarga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="our-room-show">
-                    <div class="row">
-                        <div class="carousel-list">
-                            <?php foreach($kamar as $kmr) {?>
-                            <div class="col-md-4">
-                                <div class="single-room">
-                                    <div class="room-img">
-                                        <a href="#"><img style="height : 250px;" src="<?=base_url()?>/images/kamar/<?=$kmr->gambar?>" alt=""></a>
-                                    </div>
-                                    <div class="room-desc">
-                                        <div class="room-name">
-                                            <h3><a href="#"><?=$kmr->jenis?></a></h3>
-                                        </div>
-                                        <div class="room-rent">
-                                            <h6><?=$kmr->jumlah?> kamar tersedia </h6>
-                                        </div>
-                                        <div class="room-rent">
-                                            <h6>Rp <?=$kmr->harga?> / <label>Malam</label></h6>
-                                        </div>
-                                        <div class="room-book">
-                                        <?php if ($kmr->jumlah > 0) {
-                                            # code...?>
-                                            <a href="<?=site_url('Auth/booking/'.$kmr->id)?>">Pesan</a>
-                                        </div>
-                                        <?php }else{} ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Our room end-->
 
     </div>
-
-    
-    
-
-
-
   <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- jquery latest version -->
@@ -357,14 +237,3 @@
 <!-- custom script -->
 <script src="bahan/script.js"></script>
 
-
-
-
-
-
-
-
-
-
-</body>
-</html>

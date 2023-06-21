@@ -17,7 +17,7 @@ class Pengguna_model extends CI_Model {
 	}
 	public function pesananall()
 	{
-		$query = $this->db->query("SELECT * FROM pesan");
+		$query = $this->db->get('pesan');
 		return $query->result();
 	}
 }

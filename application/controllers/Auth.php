@@ -10,6 +10,7 @@ class Auth extends CI_Controller {
 	    $this->load->model('Auth_model');
 	    $this->load->model('Kamar_model');
 	    $this->load->model('Transaksi_model');
+	    $this->load->model('Fasilitas_model');
 	} 
 
 	public function utama()
@@ -80,7 +81,14 @@ class Auth extends CI_Controller {
 	{
 		if (! $this->session->userdata('email')) redirect('Auth/login');
 		$data['detail'] = $this->db->get_where('kamar',['id' => $id])->row();
+		$data['fasilitas'] = $this->Fasilitas_model->read('fasilitas');
 		$this->load->view('user/booking', $data);
+	}
+	public function profile($id)
+	{
+		if (! $this->session->userdata('email')) redirect('Auth/login');
+		$data['detail'] = $this->db->get_where('pengguna',['id_pengguna' => $id])->row();
+		$this->load->view('user/profile', $data);
 	}
 
 	public function do_booking(){
