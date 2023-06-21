@@ -171,6 +171,15 @@ padding:15px;
             <div class="row">
                 <div class="col-sm-5">
                     <h4>ME HOTEL</h4>
+                    <i
+              class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Bandung, Indonesia<br />
+            <i
+              class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Phone: +62 151515<br />
+            <i
+              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Email: mehotel@gmail.com<br />
                 </div>              
                  
                  <div class="col-sm-3">

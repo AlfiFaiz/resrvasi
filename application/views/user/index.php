@@ -137,7 +137,11 @@
                 <span ><?= $this->session->userdata('nama');?></span>
               </h2>
               <br>
-              <p style="text-align: justify;"> Kami menyediakan : <br> tempat yang baik, <br> lokasi yang strategis,<br> ruangan yang nyaman dan pelayanan prima <br>Sehingga pelanggan tidak merasa kapok setelah datang kesini</p>
+              <p style="text-align: justify;"> Kami menyediakan : <br> tempat yang baik, <br> lokasi yang strategis,<br> ruangan yang nyaman dan pelayanan prima <br>Sehingga pelanggan tidak merasa kapok setelah datang kesini
+            <br>
+            Our prices are under close control as we work with thousands of hotels <br>and dozens of providers directly. This also means that we always have <br>great offers for most destinations.
+        <br>
+        We have over 1900000 options of accommodation around the world.<br>This includes hotels, hostels, apartments, villas, and even campgrounds. <br> Find suitable accommodation at any time of the year.</p>
             </div>
 			<br>
       <div class="col-sm-6">				
@@ -291,6 +295,15 @@
             <div class="row">
                 <div class="col-sm-5">
                     <h4>ME HOTEL</h4>
+                    <i
+              class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Bandung, Indonesia<br />
+            <i
+              class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Phone: +62 151515<br />
+            <i
+              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+            Email: mehotel@gmail.com<br />
                 </div>              
                  
                  <div class="col-sm-3">

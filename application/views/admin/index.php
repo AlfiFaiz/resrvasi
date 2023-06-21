@@ -258,12 +258,6 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <?php 
-                            // $this->db->select('*');
-                            // $this->db->from('tranksasi');
-                            // $this->db->like('Confirm');
-                            // echo $this->db->count_all_results()
-                            ?>
                             <span class="count"> <?php 
                             $this->db->select('*');
                             $this->db->from('transaksi');

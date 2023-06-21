@@ -72,7 +72,7 @@
                                                 <body style='font-family:tahoma; font-size:18px;' >
                                                 <center>
                                                     <div style='background-color:#9BA4B5; border-radius:5px; padding:20px;'>
-                                                    <table style='width:900px; font-size:18px; font-family:calibri; border:#9BA4B5;'>
+                                                    <table style='width:90%; font-size:18px; font-family:calibri; border:#9BA4B5;'>
                                                         <td width='70%' align='left' style='padding-right:80px; vertical-align:top; border:#9BA4B5;'>
                                                             <span style='font-size:25px'><b>ME HOTEL</b></span></br>
                                                             Bandung, Indonesia</br>
@@ -84,21 +84,21 @@
                                                             Tanggal : <?=$t->tgl_in?></br>
                                                         </td>
                                                     </table>
-                                                    <table style='width:900px; font-size:18px; font-family:calibri;border:#9BA4B5;'>
+                                                    <table style='width:90%; font-size:18px; font-family:calibri;border:#9BA4B5;'>
                                                         <td width='70%' align='left' style='padding-right:80px; vertical-align:top; border:#9BA4B5;'>
                                                         </td>
                                                         <td style='vertical-align:top; border:#9BA4B5;' width='30%' align='left'>
                                                         NAMA : <?=$t->nama?>
                                                         </td>
                                                     </table>
-                                                    <table style='width:900px; font-size:18px; font-family:calibri;border:#9BA4B5;'>
+                                                    <table style='width:90%; font-size:18px; font-family:calibri;border:#9BA4B5;'>
                                                         <td width='70%' align='left' style='padding-right:80px; vertical-align:top; border:#9BA4B5;'>
                                                         </td>
                                                         <td style='vertical-align:top; border:#9BA4B5;' width='30%' align='left'>
                                                             EMAIL : <?=$t->email?>
                                                         </td>
                                                     </table>
-                                                    <table style='width:900px; font-size:18px; font-family:calibri;border:#9BA4B5;'>
+                                                    <table style='width:90%; font-size:18px; font-family:calibri;border:#9BA4B5;'>
                                                         <td width='70%' align='left' style='padding-right:80px; vertical-align:top; border:#9BA4B5;'>
                                                         </td>
                                                         <td style='vertical-align:top; border:#9BA4B5;' width='30%' align='left'>
@@ -109,7 +109,7 @@
                                                     $tampil = $this->db->get_where('kamar',array('jenis' => $t->jenis))->row(); 
                                                     ?>
                                                     <br>
-                                                    <table cellspacing='0' style='width:900px; font-size:18px; font-family:calibri;  border-collapse: collapse;border:#9BA4B5;'>
+                                                    <table cellspacing='0' style='width:90%; font-size:18px; font-family:calibri;  border-collapse: collapse;border:#9BA4B5;'>
                                                         <tr align='center'>
                                                             <td width='10%' style="border:#9BA4B5;">Check-in</td>
                                                             <td width='10%'style="border:#9BA4B5;">Check-out</td>
@@ -131,14 +131,14 @@
                                                         </tr>
                                                     </table>
                                                 <br>
-                                                    <table style='width:900px; font-size:18px;border:#9BA4B5;' cellspacing='2'>
+                                                    <table style='width:90%; font-size:18px;border:#9BA4B5;' cellspacing='2'>
                                                     <tr>
                                                         <td align='center' style="border:#9BA4B5;">Diterima Oleh,</br></br><u>(............)</u></td>
                                                         <td align='center' style="border:#9BA4B5;">TTD,</br></br><u>(...........)</u></td>
                                                     </tr>
                                                 </table>
                                                 <?php if ($t->status === 'Confirm') { ?>
-                                                <table cellspacing='0' style='width:900px; font-size:18px; font-family:calibri;  border-collapse: collapse;border:#9BA4B5;'>
+                                                <table cellspacing='0' style='width:90%; font-size:18px; font-family:calibri;  border-collapse: collapse;border:#9BA4B5;'>
                                                         <tr align='center'>
                                                             <td width='15%' style='text-align:right;border:#9BA4B5;'>
                                                             <a class="btn btn-warning" style="cursor:pointer; color:white; font-weight:bold; text-decoration: underline;" onclick="window.open('<?= site_url('Auth/cetak/').$t->id_transaksi?>','','width=1100px,height=500,toolbar=no,location=no,directories=no,status=no,menubar=no, scrollbars=no,resizable=yes,copyhistory=no')">Print Bukti</a> 
